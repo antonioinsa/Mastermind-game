@@ -11,3 +11,19 @@ body{
     align-items: center;
 
 }
+.columns{
+    display: flex;
+    flex-direction: row;
+}
+
+.cuadrado {
+    height: 100px;
+    width: 100px;
+    border: 0.1em solid black;
+  }
+  
+.caja {
+    height: 50px;
+    width:  50px;
+    border: 0.1em solid black
+  }
