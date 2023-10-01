@@ -1,34 +1,26 @@
-const nombreUsuario = document.getElementById('nombreUsuario');
-nombreUsuario.addEventListener('input', () => {
-    localStorage.setItem('nombre usuario', nombreUsuario.value);
+const userName = document.getElementById('userName');
+userName.addEventListener('input', () => {
+    localStorage.setItem('user', userName.value);
 
-    console.log(nombreUsuario.value);
+    //console.log(userName.value);
 });
-const colorSeleccionado1 = document.getElementById('colorSeleccionado1');
-const caja1 = document.getElementById('caja1');
-colorSeleccionado1.addEventListener('input', () => {
-    caja1.style.backgroundColor = colorSeleccionado1.value;
-    localStorage.setItem('color1', colorSeleccionado1.value);
-
-    //console.log(colorSeleccionado1.value);
-
+const colorSelect1 = document.getElementById('colorSelect1');
+const caja1 = document.getElementById('box1');
+colorSelect1.addEventListener('input', () => {
+    caja1.style.backgroundColor = colorSelect1.value;
+    localStorage.setItem('color1', colorSelect1.value);
 });
-const colorSeleccionado2 = document.getElementById('colorSeleccionado2');
-const caja2 = document.getElementById('caja2');
-colorSeleccionado2.addEventListener('input', () => {
-    caja2.style.backgroundColor = colorSeleccionado2.value;
-    localStorage.setItem('color2', colorSeleccionado2.value);
-
-    //console.log(colorSeleccionado2.value);
-
+const colorSelect2 = document.getElementById('colorSelect2');
+const caja2 = document.getElementById('box2');
+colorSelect2.addEventListener('input', () => {
+    caja2.style.backgroundColor = colorSelect2.value;
+    localStorage.setItem('color2', colorSelect2.value);
 });
-const colorSeleccionado3 = document.getElementById('colorSeleccionado3');
-const caja3 = document.getElementById('caja3');
-colorSeleccionado3.addEventListener('input', () => {
-    caja3.style.backgroundColor = colorSeleccionado3.value;
-    localStorage.setItem('color3', colorSeleccionado3.value);
-
-    //console.log(colorSeleccionado3.value);
+const colorSelect3 = document.getElementById('colorSelect3');
+const caja3 = document.getElementById('box3');
+colorSelect3.addEventListener('input', () => {
+    caja3.style.backgroundColor = colorSelect3.value;
+    localStorage.setItem('color3', colorSelect3.value);
 });
 // Función para obtener una clave de localStorage y almacenarla en un array
 function localStorageData(color, localStorageArray) {
