@@ -46,20 +46,20 @@ console.log("Array Original:", colorsArray);
 console.log("Array Mezclado:", justArrayMixed);
 
 // Agregar un evento clic al div de selección
-document.getElementById("box1").addEventListener("click", function () {
-    const choiceColor = window.getComputedStyle(this).backgroundColor;
-    const hexColor = rgbToHex(choiceColor);
-    localStorage.setItem("choiceColor", hexColor);
+document.getElementById('box1').addEventListener('click', function () {
+const choiceColor1 = window.getComputedStyle(this).backgroundColor;
+const hexColor = rgbToHex(choiceColor1);
+localStorage.setItem('choiceColor', hexColor);
 });
-document.getElementById("box2").addEventListener("click", function () {
-    const choiceColor = window.getComputedStyle(this).backgroundColor;
-    const hexColor = rgbToHex(choiceColor);
-    localStorage.setItem("choiceColor", hexColor);
+document.getElementById('box2').addEventListener('click', function () {
+    const choiceColor2 = window.getComputedStyle(this).backgroundColor;
+    const hexColor = rgbToHex(choiceColor2);
+    localStorage.setItem('choiceColor', hexColor);
 });
-document.getElementById("box3").addEventListener("click", function () {
+document.getElementById('box3').addEventListener('click', function () {
     const choiceColor = window.getComputedStyle(this).backgroundColor;
     const hexColor = rgbToHex(choiceColor);
-    localStorage.setItem("choiceColor", hexColor);
+    localStorage.setItem('choiceColor', hexColor);
 });
 function rgbToHex(rgb) {
     const value = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -70,25 +70,26 @@ function rgbToHex(rgb) {
     return `#${r}${g}${b}`;
 };
 //Obtener los cuatro divs diferentes por sus IDs
-const color1 = document.getElementById("color1");
-const color2 = document.getElementById("color2");
-const color3 = document.getElementById("color3");
+const color1 = document.getElementById('color1');
+const color2 = document.getElementById('color2');
+const color3 = document.getElementById('color3');
 //const color4 = document.getElementById("color4");
 
-// Agregar un evento clic a cada uno de los cuatro divs
-color1.addEventListener("click", function () {
-    const choiceColor = localStorage.getItem("choiceColor");
-     this.style.backgroundColor = choiceColor;
+// Agregar un evento clic a cada uno de los divs
+color1.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor; 
 });
-color2.addEventListener("click", function () {
-    const choiceColor = localStorage.getItem("choiceColor");
+color2.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
-color3.addEventListener("click", function () {
-    const choiceColor = localStorage.getItem("choiceColor");
+color3.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
 //color4.addEventListener("click", function() {
 //  const colorSeleccionado = localStorage.getItem("colorSeleccionado");
 //  this.style.backgroundColor = colorSeleccionado;
 //});
+
