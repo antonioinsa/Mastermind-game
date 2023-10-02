@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css">
-    <title>Play Mastermind</title>
+    <link rel="stylesheet" href="css/style-play.css">
+    <title>Play Mm</title>
 </head>
 <body>
     <div class="row">
-        <div class="space"></div>
+        <div class="color-picker">
+            <div id="picker1"></div>
+            <div id="picker2"></div>
+            <div id="picker3"></div>
+        </div>
         <div class="line">
             <div class="container-flex" id="left">
-                <div class="color" id="color1"></div>
-                <div class="color" id="color2"></div>
-                <div class="color" id="color3"></div>
+                <div id="color1"></div>
+                <div id="color2"></div>
+                <div id="color3"></div>
             </div>
             <div class="container-flex" id="right">
                 <div id="check1"></div>
@@ -23,7 +27,6 @@
         </div>
     </div>
 
-    <script src="js/page1.js"></script>
-    <script src="js/page2.js"></script>
+    <script src="js/play.js"></script>
 </body>
 </html>
