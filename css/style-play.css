@@ -33,7 +33,7 @@ body::before {
     align-items: center;
 }
 
-.color-picker {
+#selectedColor {
     height: 20vh;
     width: 60vw;
     display: flex;
@@ -41,7 +41,7 @@ body::before {
     align-items: center;
 }
 
-#picker1 {
+#box1 {
     height: 3em;
     width: 3em;
     box-shadow: 0px 0px 34px -2px rgba(255, 255, 255, 0.73);
@@ -50,7 +50,7 @@ body::before {
     border-radius: 20%;
 }
 
-#picker2 {
+#box2 {
     height: 3em;
     width: 3em;
     box-shadow: 0px 0px 34px -2px rgba(255, 255, 255, 0.73);
@@ -59,7 +59,7 @@ body::before {
     border-radius: 20%;
 }
 
-#picker3 {
+#box3 {
     height: 3em;
     width: 3em;
     box-shadow: 0px 0px 34px -2px rgba(255, 255, 255, 0.73);
