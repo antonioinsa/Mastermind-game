@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
 
@@ -9,14 +9,98 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    background-image: url(/img/artistic-brain.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
-.columns{
+body::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.space {
+    height: 13em;
+}
+.space2 {
+    height: 2em;
+}
+.space3{
+    height: 10em;
+    width: 50em;
+    background-image: url(/img/Mastermind_Logo.png);
+}
+h2{
+    color: red;
+}
+.columns {
     display: flex;
     flex-direction: row;
-    
+
 }
+
 .box {
     height: 3em;
-    width:  3em;
-    border: 0.1em solid rgb(0, 0, 0)
+    width: 3em;
+    border: 0.2em solid rgb(255, 255, 255);
+    border-radius: 15%;
+}
+
+.seleccionador {
+    height: 8em;
+    width: 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+#colorSelect1 {
+    height: 3em;
+    width: 3em center;
+    cursor: pointer;
+    border: 0.2em solid red;
+}
+
+#colorSelect2 {
+    height: 3em;
+    width: 3em center;
+    cursor: pointer;
+    border: 0.2em solid red;
+}
+
+#colorSelect3 {
+    height: 3em;
+    width: 3em center;
+    cursor: pointer;
+    border: 0.2em solid red;
+}
+#userName{
+    cursor: pointer;
+}
+button {
+    height: 4em;
+    width: 8em;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: 0.5s;
+}
+button:hover {
+    background-color: rgb(61, 30, 233);
+    color: white;
+}
+
+.start {
+    height: 10em;
+    width: 24em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
