@@ -60,7 +60,7 @@ body::before {
     }
 }
 
-.space4{
+.space4 {
     height: 7em;
 }
 
@@ -105,6 +105,13 @@ h2 {
 }
 
 #colorSelect3 {
+    height: 3em;
+    width: 3em center;
+    cursor: pointer;
+    border: 0.2em solid red;
+}
+
+#colorSelect4 {
     height: 3em;
     width: 3em center;
     cursor: pointer;
