@@ -21,13 +21,23 @@ colorSelect3.addEventListener('input', () => {
     localStorage.setItem('color3', colorSelect3.value);
 });
 const startButton = document.getElementById('start');
-const element = document.querySelector<div>('userName');
-element.addEventListener('userName')
 startButton.addEventListener('click', () => {
-    if (element !==null) {
-        window.location.href = './play.html';
-        console.log(element);
+    if (localStorage.getItem('user') &&
+        localStorage.getItem('color1') &&
+        localStorage.getItem('color2') &&
+        localStorage.getItem('color3')) {
+        if ((localStorage.getItem('color1') ===
+            localStorage.getItem('color2')) ||
+            (localStorage.getItem('color2') ===
+                localStorage.getItem('color3')) ||
+            (localStorage.getItem('color1') ===
+                localStorage.getItem('color3'))) {
+            alert('Seleccione diferentes colores')
+        } else {
+            window.location.href = './play.html';
+        }
     } else {
-        alert('Rellena el Player name y selecciona diferentes colores para poder empezar la partida');
+        alert('Debe rellena el nombre de jugador y seleccionar diferentes colores para poder empezar la partida');
     }
+
 });
