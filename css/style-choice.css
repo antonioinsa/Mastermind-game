@@ -16,6 +16,7 @@ body {
     background-size: cover;
     background-position: center center;
 }
+
 body::before {
     z-index: -1;
     content: "";
@@ -26,30 +27,59 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 .space {
     height: 13em;
 }
+
 .space2 {
     height: 2em;
 }
-.space3{
-    height: 10em;
+
+.container {
     width: 50em;
-    background-image: url(/img/Mastermind_Logo.png);
+    height: 10em;
+    position: relative;
+    overflow: hidden;
 }
-h2{
+
+.space3 {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/Mastermind_Logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: rotate 2s linear infinite alternate;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(8%);
+    }
+}
+
+.space4{
+    height: 7em;
+}
+
+h2 {
     color: red;
 }
+
 .columns {
     display: flex;
     flex-direction: row;
-
 }
 
 .box {
     height: 3em;
     width: 3em;
     border: 0.2em solid rgb(255, 255, 255);
+    background-color: transparent;
     border-radius: 15%;
 }
 
@@ -82,9 +112,11 @@ h2{
     cursor: pointer;
     border: 0.2em solid red;
 }
-#userName{
+
+#userName {
     cursor: pointer;
 }
+
 button {
     height: 4em;
     width: 8em;
@@ -92,14 +124,15 @@ button {
     border-radius: 15%;
     transition: 0.5s;
 }
+
 button:hover {
     background-color: rgb(61, 30, 233);
     color: white;
 }
 
-.start {
-    height: 10em;
-    width: 24em;
+#start {
+    height: 3em;
+    width: 7em;
     display: flex;
     justify-content: center;
     align-items: center;
