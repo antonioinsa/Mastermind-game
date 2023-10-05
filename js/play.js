@@ -11,6 +11,8 @@ const savedColor4 = localStorage.getItem('color4');
 const box4 = document.getElementById('box4');
 box4.style.backgroundColor = savedColor4;
 
+let fila = 1;
+
 
 // Función para obtener una clave de localStorage y almacenarla en un array
 const localStorageDat = (color, localStorageArray) => {
@@ -71,35 +73,35 @@ const color2 = document.getElementById('color2-1');
 const color3 = document.getElementById('color3-1');
 const color4 = document.getElementById('color4-1');
 
-const color1 = document.getElementById('color1-2');
-const color2 = document.getElementById('color2-2');
-const color3 = document.getElementById('color3-2');
-const color4 = document.getElementById('color4-2');
+const color5 = document.getElementById('color1-2');
+const color6 = document.getElementById('color2-2');
+const color7 = document.getElementById('color3-2');
+const color8 = document.getElementById('color4-2');
 
-//const color1 = document.getElementById('color1-3');
-//const color2 = document.getElementById('color2-3');
-//const color3 = document.getElementById('color3-3');
-//const color4 = document.getElementById('color4-3');
-//
-//const color1 = document.getElementById('color1-4');
-//const color2 = document.getElementById('color2-4');
-//const color3 = document.getElementById('color3-4');
-//const color4 = document.getElementById('color4-4');
-//
-//const color1 = document.getElementById('color1-5');
-//const color2 = document.getElementById('color2-5');
-//const color3 = document.getElementById('color3-5');
-//const color4 = document.getElementById('color4-5');
-//
-//const color1 = document.getElementById('color1-6');
-//const color2 = document.getElementById('color2-6');
-//const color3 = document.getElementById('color3-6');
-//const color4 = document.getElementById('color4-6');
-//
-//const color1 = document.getElementById('color1-7');
-//const color2 = document.getElementById('color2-7');
-//const color3 = document.getElementById('color3-7');
-//const color4 = document.getElementById('color4-7');
+const color9 = document.getElementById('color1-3');
+const color10 = document.getElementById('color2-3');
+const color11 = document.getElementById('color3-3');
+const color12 = document.getElementById('color4-3');
+
+const color13 = document.getElementById('color1-4');
+const color14 = document.getElementById('color2-4');
+const color15 = document.getElementById('color3-4');
+const color16 = document.getElementById('color4-4');
+
+const color17 = document.getElementById('color1-5');
+const color18 = document.getElementById('color2-5');
+const color19 = document.getElementById('color3-5');
+const color20 = document.getElementById('color4-5');
+
+const color21 = document.getElementById('color1-6');
+const color22 = document.getElementById('color2-6');
+const color23 = document.getElementById('color3-6');
+const color24 = document.getElementById('color4-6');
+
+const color25 = document.getElementById('color1-7');
+const color26 = document.getElementById('color2-7');
+const color27 = document.getElementById('color3-7');
+const color28 = document.getElementById('color4-7');
 // Agregar un evento clic a cada uno de los divs
 color1.addEventListener('click', function () {
     const choiceColor = localStorage.getItem('choiceColor');
@@ -114,6 +116,22 @@ color3.addEventListener('click', function () {
     this.style.backgroundColor = choiceColor;
 });
 color4.addEventListener("click", function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+color5.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+color6.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+color7.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+color8.addEventListener("click", function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
