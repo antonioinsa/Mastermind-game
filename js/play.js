@@ -68,10 +68,10 @@ const rgbToHex = (rgb) => {
 };
 
 //Obtener los cuatro divs diferentes por sus IDs
-const color1 = document.getElementById('color1-1');
-const color2 = document.getElementById('color2-1');
-const color3 = document.getElementById('color3-1');
-const color4 = document.getElementById('color4-1');
+const color1 = document.getElementById('color0-1');
+const color2 = document.getElementById('color1-1');
+const color3 = document.getElementById('color2-1');
+const color4 = document.getElementById('color3-1');
 
 //const color1 = document.getElementById('color1-2');
 //const color2 = document.getElementById('color2-2');
@@ -119,45 +119,44 @@ color4.addEventListener("click", function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
-const arraySelect = [];
-const maxLength = 4;
+const arraySelect = ['', '', '', ''];
 boxes = document.querySelectorAll('.box');
 boxes.forEach(box => {
     box.addEventListener('click', () => {
-        console.log(box.getAttribute('id'));
-        const hexColor = rgbToHex(box.style.backgroundColor)
-        if (arraySelect.length >= maxLength) {
-            arraySelect.shift();
-        }
-        arraySelect.push(hexColor);
+        const id = box.getAttribute('id');
+        const idlength = id[id.length - 3];
+        console.log(idlength);
+        const hexColor = rgbToHex(box.style.backgroundColor);
+        arraySelect[idlength] = hexColor
         console.log(arraySelect);
     });
 });
-//comprobar array
-const array2 = ['#e01a1a', '#2b2727', '#e8d4d4', '#3a0303']
-const checkButton = document.getElementById('check');
-checkButton.addEventListener('click', () => {
 
-    const isArrayEqual = (randomArray, array2) => {
-    if (randomArray.length !== array2.length) {
-    return 'Te falta seleccionar algun color';
-    }
-    // Recorre ambos arrays
-    for (let i = 0; i < randomArray.length; i++) {
-    // Comprueba si el color en la posición 'i' de array1 existe en array2
-    if (array2.includes(randomArray[i])) {
-        // Si existe, verifica si está en la misma posición
-        if (randomArray[i] === array2[i]) {
-            console.log(`El color "${randomArray[i]}" está en la misma posición en ambos arrays.`);
-        } else {
-            console.log(`El color "${randomArray[i]}" está en una posición diferente en ambos arrays.`);
-        }
-    } else {
-        console.log(`El color "${randomArray[i]}" no está en el segundo array.`);
-    }
-}
-};
-// Llama a la función de comparación
-isArrayEqual(randomArray, array2);
-});
+//comprobar array
+//const array2 = ['#e01a1a', '#2b2727', '#e8d4d4', '#3a0303']
+//const checkButton = document.getElementById('check');
+//checkButton.addEventListener('click', () => {
+//
+//    const isArrayEqual = (randomArray, array2) => {
+//    if (randomArray.length !== array2.length) {
+//    return 'Te falta seleccionar algun color';
+//    }
+//    // Recorre ambos arrays
+//    for (let i = 0; i < randomArray.length; i++) {
+//    // Comprueba si el color en la posición 'i' de array1 existe en array2
+//    if (array2.includes(randomArray[i])) {
+//        // Si existe, verifica si está en la misma posición
+//        if (randomArray[i] === array2[i]) {
+//            console.log('El color "${randomArray[i]}" está en la misma posición en los 2 arrays');
+//        } else {
+//            console.log(`El color "${randomArray[i]}" está en una posición diferente en ambos arrays.`);
+//        }
+//    } else {
+//        console.log(`El color "${randomArray[i]}" no está en el segundo array.`);
+//    }
+//}
+//};
+//// Llama a la función de comparación
+//isArrayEqual(randomArray, array2);
+//});
 

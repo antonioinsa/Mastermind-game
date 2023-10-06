@@ -159,6 +159,13 @@ button:hover {
     width: 30vw
 }
 
+#color0-1 {
+    height: 2em;
+    width: 2em;
+    border: 0.15em solid white;
+    border-radius: 20%;
+}
+
 #color1-1 {
     height: 2em;
     width: 2em;
@@ -174,12 +181,6 @@ button:hover {
 }
 
 #color3-1 {
-    height: 2em;
-    width: 2em;
-    border: 0.15em solid white;
-    border-radius: 20%;
-}
-#color4-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -213,6 +214,13 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+#color0-2 {
+    height: 2em;
+    width: 2em;
+    border: 0.15em solid white;
+    border-radius: 20%;
+}
+
 #color1-2 {
     height: 2em;
     width: 2em;
@@ -226,14 +234,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
-
 #color3-2 {
-    height: 2em;
-    width: 2em;
-    border: 0.15em solid white;
-    border-radius: 20%;
-}
-#color4-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
