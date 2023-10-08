@@ -133,30 +133,33 @@ boxes.forEach(box => {
 });
 
 //comprobar array
-//const array2 = ['#e01a1a', '#2b2727', '#e8d4d4', '#3a0303']
-//const checkButton = document.getElementById('check');
-//checkButton.addEventListener('click', () => {
-//
-//    const isArrayEqual = (randomArray, array2) => {
-//    if (randomArray.length !== array2.length) {
-//    return 'Te falta seleccionar algun color';
-//    }
-//    // Recorre ambos arrays
-//    for (let i = 0; i < randomArray.length; i++) {
-//    // Comprueba si el color en la posición 'i' de array1 existe en array2
-//    if (array2.includes(randomArray[i])) {
-//        // Si existe, verifica si está en la misma posición
-//        if (randomArray[i] === array2[i]) {
-//            console.log('El color "${randomArray[i]}" está en la misma posición en los 2 arrays');
-//        } else {
-//            console.log(`El color "${randomArray[i]}" está en una posición diferente en ambos arrays.`);
-//        }
-//    } else {
-//        console.log(`El color "${randomArray[i]}" no está en el segundo array.`);
-//    }
-//}
-//};
+const checkButton = document.getElementById('check');
+checkButton.addEventListener('click', () => {
+
+    const isArrayEqual = (randomArray, arraySelect) => {
+    if (randomArray.length !== arraySelect.length) {
+    return 'Te falta seleccionar algun color';
+    }
+    // Recorre ambos arrays
+    for (let i = 0; i < randomArray.length; i++) {
+    // Comprueba si el color en la posición 'i' de array1 existe en array2
+    if (arraySelect.includes(randomArray[i])) {
+        // Si existe, verifica si está en la misma posición
+        if (randomArray[i] === arraySelect[i]) {
+            const ok = (${randomArray[i]}) => {
+                ok (document.style.backgroundColor = white);
+            }
+            console.log(`El color "${randomArray[i]}" misma posicion 2 arrays.`);
+
+        } else {
+            console.log(`El color "${randomArray[i]}" posición diferente 2 arrays.`);
+        }
+    } else {
+        console.log(`El color "${randomArray[i]}" ningun color.`);
+    }
+}
+};
 //// Llama a la función de comparación
-//isArrayEqual(randomArray, array2);
-//});
+isArrayEqual(randomArray, arraySelect);
+});
 
