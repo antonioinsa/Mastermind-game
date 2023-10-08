@@ -20,15 +20,37 @@ colorSelect3.addEventListener('input', () => {
     caja3.style.backgroundColor = colorSelect3.value;
     localStorage.setItem('color3', colorSelect3.value);
 });
+const colorSelect4 = document.getElementById('colorSelect4');
+const caja4 = document.getElementById('box4');
+colorSelect4.addEventListener('input', () => {
+    caja4.style.backgroundColor = colorSelect4.value;
+    localStorage.setItem('color4', colorSelect4.value);
+});
 const startButton = document.getElementById('start');
-
 startButton.addEventListener('click', () => {
-    if ((localStorage.getItem('user')) && 
-    (localStorage.getItem('color1')) && 
-    (localStorage.getItem('color2')) && 
-    (localStorage.getItem('color3'))) {
-        window.location.href = './play.html';
+    if (localStorage.getItem('user') &&
+        localStorage.getItem('color1') &&
+        localStorage.getItem('color2') &&
+        localStorage.getItem('color3') &&
+        localStorage.getItem('color4')) {
+        if ((localStorage.getItem('color1') ===
+            localStorage.getItem('color2')) ||
+            (localStorage.getItem('color2') ===
+                localStorage.getItem('color3')) ||
+            (localStorage.getItem('color1') ===
+                localStorage.getItem('color3')) ||
+            (localStorage.getItem('color1') ===
+                localStorage.getItem('color4')) ||
+            (localStorage.getItem('color2') ===
+                localStorage.getItem('color4')) ||
+            (localStorage.getItem('color3') ===
+                localStorage.getItem('color4'))) {
+            alert('Seleccione diferentes colores')
+        } else {
+            window.location.href = './play.html';
+        }
     } else {
-        alert('Rellena el Player name y selecciona diferentes colores para poder empezar la partida');
+        alert('Debe rellena el nombre de jugador y seleccionar diferentes colores para poder empezar la partida');
     }
+
 });

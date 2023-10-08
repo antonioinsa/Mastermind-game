@@ -1,0 +1,71 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-family: 'Cinzel', serif;
+    background-image: url(/img/brain-center-wallpaper.jpeg);
+}
+.space-logo{
+    height: 10em;
+    width: 100vw;
+}
+.logo{
+    align-items: start;
+    height: 1.5em;
+    width: 100vw;
+    font-size: 100px;
+    background: #FFC814;
+    background: linear-gradient(to left, #FFC814 0%, #FF9A36 32%, #FFC95C 50%, #FFAA00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.space-logo-2{
+    height: 25em;
+    width: 100vw;
+}
+.text{
+    height: 3em;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: antiquewhite;
+}
+.space-logo-3{
+    height: 5em;
+    width: 100vw;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#play{
+    border-radius: 50%;
+    height: 5em;
+    width: 20em;
+    font-size: 1em;
+    color: red;
+    font-weight: bolder;
+    background-color: orange;
+    cursor: pointer;
+}
+#about{
+    border-radius: 50%;
+    height: 5em;
+    width: 20em;
+    font-size: 1em;
+    color: red;
+    font-weight: bolder;
+    background-color: orange;
+    cursor: pointer;
+}
