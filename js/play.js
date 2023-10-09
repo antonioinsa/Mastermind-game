@@ -146,9 +146,7 @@ checkButton.addEventListener('click', () => {
     if (arraySelect.includes(randomArray[i])) {
         // Si existe, verifica si está en la misma posición
         if (randomArray[i] === arraySelect[i]) {
-            const ok = (${randomArray[i]}) => {
-                ok (document.style.backgroundColor = white);
-            }
+            
             console.log(`El color "${randomArray[i]}" misma posicion 2 arrays.`);
 
         } else {

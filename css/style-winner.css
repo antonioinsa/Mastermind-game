@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
     display: flex;
@@ -7,15 +7,18 @@ body{
     flex-direction: column;
     background-image: url(/img/explosion-brain.jpeg);
 }
-.space{
+
+.space {
     height: 25em;
 }
-.text{
+
+.text {
     font-size: 200px;
     font-weight: bolder;
     color: red;
 }
-button{
+
+button {
     height: 5em;
     width: 15em;
     color: blue;
@@ -24,7 +27,8 @@ button{
     cursor: pointer;
     transition: 0.5s;
 }
-button:hover{
+
+button:hover {
     background-color: blue;
     color: red;
 }

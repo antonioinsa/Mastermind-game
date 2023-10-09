@@ -22,6 +22,7 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 button {
     height: 4em;
     width: 10em;
@@ -31,70 +32,82 @@ button {
     background-color: rgb(110, 93, 93);
     margin-left: 2em;
 }
+
 button:hover {
     background-color: rgb(90, 81, 81);
     color: rgb(255, 255, 255);
 }
+
 .row1 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row2 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row3 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row4 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row5 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row6 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row7 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row8 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row9 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .row10 {
     height: 4em;
     width: 40em;
     display: flex;
     align-items: center;
 }
+
 .selectedColor {
     height: 15em;
     width: 40em;
@@ -192,7 +205,7 @@ button:hover {
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
-    
+
 }
 
 #check2-1 {
@@ -208,12 +221,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color0-2 {
     height: 2em;
     width: 2em;
@@ -234,6 +249,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color3-2 {
     height: 2em;
     width: 2em;
@@ -261,12 +277,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-3 {
     height: 2em;
     width: 2em;
@@ -287,6 +305,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-3 {
     height: 2em;
     width: 2em;
@@ -308,18 +327,20 @@ button:hover {
     border-radius: 50%;
 }
 
-#check3-3{
+#check3-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-4 {
     height: 2em;
     width: 2em;
@@ -340,6 +361,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-4 {
     height: 2em;
     width: 2em;
@@ -367,12 +389,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-4 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-5 {
     height: 2em;
     width: 2em;
@@ -393,6 +417,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-5 {
     height: 2em;
     width: 2em;
@@ -420,12 +445,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-5 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-6 {
     height: 2em;
     width: 2em;
@@ -446,6 +473,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-6 {
     height: 2em;
     width: 2em;
@@ -473,12 +501,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-6 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-7 {
     height: 2em;
     width: 2em;
@@ -499,6 +529,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-7 {
     height: 2em;
     width: 2em;
@@ -526,12 +557,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-7 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-8 {
     height: 2em;
     width: 2em;
@@ -552,6 +585,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-8 {
     height: 2em;
     width: 2em;
@@ -579,12 +613,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-8 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-9 {
     height: 2em;
     width: 2em;
@@ -605,6 +641,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-9 {
     height: 2em;
     width: 2em;
@@ -632,12 +669,14 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-9 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #color1-10 {
     height: 2em;
     width: 2em;
@@ -658,6 +697,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 20%;
 }
+
 #color4-10 {
     height: 2em;
     width: 2em;
@@ -685,6 +725,7 @@ button:hover {
     border: 0.15em solid white;
     border-radius: 50%;
 }
+
 #check4-10 {
     height: 2em;
     width: 2em;
