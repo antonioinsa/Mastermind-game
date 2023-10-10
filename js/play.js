@@ -11,14 +11,13 @@ const savedColor4 = localStorage.getItem('color4');
 const box4 = document.getElementById('box4');
 box4.style.backgroundColor = savedColor4;
 
-const fila = 'row' + 1;
 
-// Función para obtener una clave de localStorage y almacenarla en un array
+
+// Obtener clave localStorage y almacenarla en array
 const localStorageDat = (color, localStorageArray) => {
     const colors = localStorage.getItem(color);
     if (colors !== null) {
         localStorageArray.push(colors);
-        //localStorage.removeItem(color); // Opcional: eliminar la clave de localStorage si se desea
     }
 };
 const colorsArray = [];
@@ -35,9 +34,9 @@ for (let i = 0; i < numeroElementosAleatorios; i++) {
 }
 // Imprimir el nuevo array con elementos aleatorios
 console.log(randomArray);
-console.log(colorsArray);
 
-// Agregar un evento clic al div de selección
+
+// Agregar evento clic al div de selección
 document.getElementById('box1').addEventListener('click', function () {
     const choiceColor = window.getComputedStyle(this).backgroundColor;
     const hexColor = rgbToHex(choiceColor);
@@ -131,33 +130,47 @@ boxes.forEach(box => {
         console.log(arraySelect);
     });
 });
+const check1 = document.querySelector('#check1-1');
+const check2 = document.querySelector('#check2-1');
+const check3 = document.querySelector('#check3-1');
+const check4 = document.querySelector('#check4-1');
+
 
 //comprobar array
 const checkButton = document.getElementById('check');
 checkButton.addEventListener('click', () => {
 
     const isArrayEqual = (randomArray, arraySelect) => {
-    if (randomArray.length !== arraySelect.length) {
-    return 'Te falta seleccionar algun color';
-    }
-    // Recorre ambos arrays
-    for (let i = 0; i < randomArray.length; i++) {
-    // Comprueba si el color en la posición 'i' de array1 existe en array2
-    if (arraySelect.includes(randomArray[i])) {
-        // Si existe, verifica si está en la misma posición
-        if (randomArray[i] === arraySelect[i]) {
+        //if (randomArray.length !== arraySelect.length) {
+        //    return; 'Te falta seleccionar algun color';
+        //}
+        for (let i = 0; i < randomArray.length; i++) {
+            if (randomArray[i]=arraySelect[i]) {
+                window.location.href = './winner.html'
             
-            console.log(`El color "${randomArray[i]}" misma posicion 2 arrays.`);
-
-        } else {
-            console.log(`El color "${randomArray[i]}" posición diferente 2 arrays.`);
+            if (randomArray[0] === arraySelect[0]) {
+                check1.style.backgroundColor = 'white';
+            } else if(randomArray.includes(arraySelect[i])) {
+                check1.style.backgroundColor = 'red';              
+            }
+            if (randomArray[1] === arraySelect[1]) {
+                check2.style.backgroundColor = 'white';
+            } else if(arraySelect.includes(randomArray[i])) {
+                check2.style.backgroundColor = 'red';
+            }
+            if (randomArray[2] === arraySelect[2]) {
+                check3.style.backgroundColor = 'white';
+            } else if(arraySelect.includes(randomArray[i])) {
+                check3.style.backgroundColor = 'red';
+            }
+            if (randomArray[3] === arraySelect[3]) {
+                check4.style.backgroundColor = 'white';
+            } else if(arraySelect.includes(randomArray[i])) {
+                check4.style.backgroundColor = 'red';
+            }
+            }
         }
-    } else {
-        console.log(`El color "${randomArray[i]}" ningun color.`);
-    }
-}
-};
-//// Llama a la función de comparación
-isArrayEqual(randomArray, arraySelect);
+    };
+    isArrayEqual(randomArray, arraySelect);
 });
 

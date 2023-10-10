@@ -9,7 +9,10 @@ body {
 }
 
 .space {
-    height: 25em;
+    height: 7em;
+    font-size: 80px;
+    font-weight: bolder;
+    color: red;
 }
 
 .text {
