@@ -33,7 +33,7 @@ for (let i = 0; i < numeroElementosAleatorios; i++) {
     randomArray.push(elementoAleatorio);
 }
 // Imprimir el nuevo array con elementos aleatorios
-console.log(randomArray);
+console.log("combinscion ganadora", randomArray);
 
 
 // Agregar evento clic al div de selección
@@ -66,58 +66,208 @@ const rgbToHex = (rgb) => {
     return `#${r}${g}${b}`;
 };
 
-//Obtener los cuatro divs diferentes por sus IDs
-const color1 = document.getElementById('color0-1');
-const color2 = document.getElementById('color1-1');
-const color3 = document.getElementById('color2-1');
-const color4 = document.getElementById('color3-1');
-
-//const color1 = document.getElementById('color1-2');
-//const color2 = document.getElementById('color2-2');
-//const color3 = document.getElementById('color3-2');
-//const color4 = document.getElementById('color4-2');
-//
-//const color9 = document.getElementById('color1-3');
-//const color10 = document.getElementById('color2-3');
-//const color11 = document.getElementById('color3-3');
-//const color12 = document.getElementById('color4-3');
-//
-//const color13 = document.getElementById('color1-4');
-//const color14 = document.getElementById('color2-4');
-//const color15 = document.getElementById('color3-4');
-//const color16 = document.getElementById('color4-4');
-//
-//const color17 = document.getElementById('color1-5');
-//const color18 = document.getElementById('color2-5');
-//const color19 = document.getElementById('color3-5');
-//const color20 = document.getElementById('color4-5');
-//
-//const color21 = document.getElementById('color1-6');
-//const color22 = document.getElementById('color2-6');
-//const color23 = document.getElementById('color3-6');
-//const color24 = document.getElementById('color4-6');
-//
-//const color25 = document.getElementById('color1-7');
-//const color26 = document.getElementById('color2-7');
-//const color27 = document.getElementById('color3-7');
-//const color28 = document.getElementById('color4-7');
+//Obtener los cuatro divs de selccion diferentes por sus IDs
+const row1Color1 = document.getElementById('color0-1');
+const row1Color2 = document.getElementById('color1-1');
+const row1Color3 = document.getElementById('color2-1');
+const row1Color4 = document.getElementById('color3-1');
+const row2Color1 = document.getElementById('color0-2');
+const row2Color2 = document.getElementById('color1-2');
+const row2Color3 = document.getElementById('color2-2');
+const row2Color4 = document.getElementById('color3-2');
+const row3Color1 = document.getElementById('color0-3');
+const row3Color2 = document.getElementById('color1-3');
+const row3Color3 = document.getElementById('color2-3');
+const row3Color4 = document.getElementById('color3-3');
+const row4Color1 = document.getElementById('color0-4');
+const row4Color2 = document.getElementById('color1-4');
+const row4Color3 = document.getElementById('color2-4');
+const row4Color4 = document.getElementById('color3-4');
+const row5Color1 = document.getElementById('color0-5');
+const row5Color2 = document.getElementById('color1-5');
+const row5Color3 = document.getElementById('color2-5');
+const row5Color4 = document.getElementById('color3-5');
+const row6Color1 = document.getElementById('color0-6');
+const row6Color2 = document.getElementById('color1-6');
+const row6Color3 = document.getElementById('color2-6');
+const row6Color4 = document.getElementById('color3-6');
+const row7Color1 = document.getElementById('color0-7');
+const row7Color2 = document.getElementById('color1-7');
+const row7Color3 = document.getElementById('color2-7');
+const row7Color4 = document.getElementById('color3-7');
+const row8Color1 = document.getElementById('color0-8');
+const row8Color2 = document.getElementById('color1-8');
+const row8Color3 = document.getElementById('color2-8');
+const row8Color4 = document.getElementById('color3-8');
+const row9Color1 = document.getElementById('color0-9');
+const row9Color2 = document.getElementById('color1-9');
+const row9Color3 = document.getElementById('color2-9');
+const row9Color4 = document.getElementById('color3-9');
+const row10Color1 = document.getElementById('color0-10');
+const row10Color2 = document.getElementById('color1-10');
+const row10Color3 = document.getElementById('color2-10');
+const row10Color4 = document.getElementById('color3-10');
 // Agregar un evento clic a cada uno de los divs
-color1.addEventListener('click', function () {
+row1Color1.addEventListener('click', function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
-color2.addEventListener('click', function () {
+row1Color2.addEventListener('click', function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
-color3.addEventListener('click', function () {
+row1Color3.addEventListener('click', function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
-color4.addEventListener("click", function () {
+row1Color4.addEventListener("click", function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
 });
+row2Color1.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+row2Color2.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+row2Color3.addEventListener('click', function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+row2Color4.addEventListener("click", function () {
+    const choiceColor = localStorage.getItem('choiceColor');
+    this.style.backgroundColor = choiceColor;
+});
+////row3Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row3Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row3Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row3Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row4Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row4Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row4Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row4Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row5Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row5Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row5Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row5Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row6Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row6Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row6Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row6Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row7Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row7Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row7Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row7Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row8Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row8Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row8Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row8Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row9Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row9Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row9Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row9Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+////row10Color1.addEventListener('click', function () {
+////    const choiceColor = localStorage.getItem('choiceColor');
+////    this.style.backgroundColor = choiceColor;
+////});
+//row10Color2.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row10Color3.addEventListener('click', function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
+//row10Color4.addEventListener("click", function () {
+//    const choiceColor = localStorage.getItem('choiceColor');
+//    this.style.backgroundColor = choiceColor;
+//});
 const arraySelect = ['', '', '', ''];
 boxes = document.querySelectorAll('.box');
 boxes.forEach(box => {
@@ -130,47 +280,46 @@ boxes.forEach(box => {
         console.log(arraySelect);
     });
 });
-const check1 = document.querySelector('#check1-1');
-const check2 = document.querySelector('#check2-1');
-const check3 = document.querySelector('#check3-1');
-const check4 = document.querySelector('#check4-1');
-
+let  row = 1;
 
 //comprobar array
 const checkButton = document.getElementById('check');
 checkButton.addEventListener('click', () => {
+    
+    
+    //console.log(arraySelect);
+    //console.log(randomArray);
+    if(JSON.stringify(arraySelect) === JSON.stringify(randomArray)){
+        window.location.href = './winner.html';
+        //console.log('ganador');
+        row = 1;
+    } else {
+        row++
+    }
 
-    const isArrayEqual = (randomArray, arraySelect) => {
-        //if (randomArray.length !== arraySelect.length) {
-        //    return; 'Te falta seleccionar algun color';
-        //}
-        for (let i = 0; i < randomArray.length; i++) {
-            if (randomArray[i]=arraySelect[i]) {
-                window.location.href = './winner.html'
-            
-            if (randomArray[0] === arraySelect[0]) {
-                check1.style.backgroundColor = 'white';
-            } else if(randomArray.includes(arraySelect[i])) {
-                check1.style.backgroundColor = 'red';              
-            }
-            if (randomArray[1] === arraySelect[1]) {
-                check2.style.backgroundColor = 'white';
-            } else if(arraySelect.includes(randomArray[i])) {
-                check2.style.backgroundColor = 'red';
-            }
-            if (randomArray[2] === arraySelect[2]) {
-                check3.style.backgroundColor = 'white';
-            } else if(arraySelect.includes(randomArray[i])) {
-                check3.style.backgroundColor = 'red';
-            }
-            if (randomArray[3] === arraySelect[3]) {
-                check4.style.backgroundColor = 'white';
-            } else if(arraySelect.includes(randomArray[i])) {
-                check4.style.backgroundColor = 'red';
-            }
-            }
-        }
-    };
-    isArrayEqual(randomArray, arraySelect);
+    // if (arraySelect.every ((color) => color !== "")) {
+    //     comprobar(randomArray, arraySelect);
+
+    // } else {
+    //     alert("Introduce todos los colores")
+    // }
+    
 });
+
+//const isArrayEqual = (randomArray, arraySelect) => {
+//if (randomArray.length !== arraySelect.length) {
+//    return; 'Te falta seleccionar algun color';
+//}
+//function comprobar(randomArray, arraySelect){
+//    for (let i = 0; i < 4; i++) {
+//        let check = document.getElementbyId(`check${i}`);
+//        if (randomArray[i] === arraySelect[i]) {
+//            check.style.backgroundColor = 'white';
+//        } else if (randomArray.includes(arraySelect[i])) {
+//            check.style.backgroundColor = 'black';
+//        }
+//    }
+//};
+//isArrayEqual(randomArray, arraySelect);
+
 

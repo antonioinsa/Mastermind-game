@@ -200,12 +200,19 @@ button:hover {
     border-radius: 20%;
 }
 
-#check1-1 {
+#check0-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
 
+}
+
+#check1-1 {
+    height: 2em;
+    width: 2em;
+    border: 0.15em solid white;
+    border-radius: 50%;
 }
 
 #check2-1 {
@@ -216,13 +223,6 @@ button:hover {
 }
 
 #check3-1 {
-    height: 2em;
-    width: 2em;
-    border: 0.15em solid white;
-    border-radius: 50%;
-}
-
-#check4-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
