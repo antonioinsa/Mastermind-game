@@ -10,3 +10,7 @@ restartGame.addEventListener('click', () => {
     });
     window.location.href = '../index.html'
 });
+playAgain.addEventListener('click', () => {
+    window.location.href = './play.html'
+    localStorage.removeItem('randomArray');
+});

@@ -79,7 +79,9 @@ El usuario comenzará en la página de bienvenida, en la cual puede dirigirse a 
 
 Una vez introducido todo lo anterior, ya podrá empezar a realizar combinaciones con los colores que seleccionó anteriormente. Una vez rellenada toda la fila, el usuario dará clic en el botón "CHECK" para realizar la comprobación y, si no ha acertado la combinación, pasará a la siguiente fila.
 
-A la hora de realizar la combinación ganadora, la máquina puede, o no, repetir algún color para dotar de complejidad a la combinación.
+A la hora de realizar la combinación ganadora, la máquina puede, o no, repetir algún color para dotar de complejidad a la combinación (uno, dos o tres colores, nunca repetira los cuatro colores).
+
+Cada vez que el usuario desé comprobar su conbinación, se le dara unas pistas. Las cuales son, si el color esta en su posición correcta se le indicara en color verde y si el color seleccionado no esta en su posición correcta, pero si en la combinación ganadora, se le indicara en color ambar.
 
 Si el usuario logra dar con la combinación ganadora antes de diez intentos, habrá ganado y, si desea volver a jugar, deberá reiniciar el juego para introducir de nuevo todos los datos que se le solicitan. En cambio, si pierde, puede volver a jugar otra partida y no se le pedirá que vuelva a introducir ni su nombre ni seleccionar los colores, ya que la máquina generará una nueva combinación ganadora.
 
