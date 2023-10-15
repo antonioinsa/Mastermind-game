@@ -225,7 +225,7 @@ console.log(row);
 //    }
 //}
 const isArrayEqual = (randomArray, arraySelect) => {
-    return randomArray.length === arraySelect.length;
+    return randomArray.length !== arraySelect.length;
 }
 //const arraysVerify = () => {
 //    const button = document.getElementById('check');
@@ -249,7 +249,8 @@ checkButtom.addEventListener('click', () => {
     
         if (row === 1) {
             if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
-                alert("¡Falta un color!");
+                row===-1
+                alert("¡Falta algun color!");
             } else if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
@@ -287,9 +288,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }
         if (row === 2) {
-            if (empty(row2Color1, row2Color2, row2Color3, row2Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (empty(row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+            if (isArrayEqual(row2Color1, row2Color2, row2Color3, row2Color4) === true) {
+                alert("¡Falta algun color!");
+            } else if (isArrayEqual(row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check21.style.backgroundColor = 'green'
@@ -327,9 +328,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }     
         if (row === 3) {
-            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check31.style.backgroundColor = 'green'
@@ -364,9 +365,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }
         if (row === 4) {
-            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check41.style.backgroundColor = 'green'
@@ -401,9 +402,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }
         if (row === 5) {
-            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check51.style.backgroundColor = 'green'
@@ -440,7 +441,7 @@ checkButtom.addEventListener('click', () => {
         if (row === 6) {
             if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
+            } else if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check61.style.backgroundColor = 'green'
@@ -474,9 +475,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }
         if (row === 7) {
-            if (empty( row2Color1, row2Color2, row2Color3, row2Color4) === true) {
+            if (isArrayEqual( row2Color1, row2Color2, row2Color3, row2Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+            } else if (isArrayEqual(  row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check71.style.backgroundColor = 'green'
@@ -511,9 +512,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }     
         if (row === 8) {
-            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check81.style.backgroundColor = 'green'
@@ -548,9 +549,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }
         if (row === 9) {
-            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check91.style.backgroundColor = 'green'
@@ -585,9 +586,9 @@ checkButtom.addEventListener('click', () => {
             arraySelect = ['', '', '', ''];
         }
         if (row === 10) {
-            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
                 alert("¡Falta un color!");
-            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check101.style.backgroundColor = 'green'
