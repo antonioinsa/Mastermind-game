@@ -35,3 +35,36 @@ button {
 button:hover {
     background-color: red;
 }
+.winner-combination{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25em;
+}
+#color1 {
+    height: 4em;
+    width: 4em;
+    border: 0.15em solid black;
+    border-radius: 20%;
+}
+
+#color2 {
+    height: 4em;
+    width: 4em;
+    border: 0.15em solid black;
+    border-radius: 20%;
+}
+
+#color3 {
+    height: 4em;
+    width: 4em;
+    border: 0.15em solid black;
+    border-radius: 20%;
+}
+
+#color4 {
+    height: 4em;
+    width: 4em;
+    border: 0.15em solid black;
+    border-radius: 20%;
+}
