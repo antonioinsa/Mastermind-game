@@ -225,404 +225,404 @@ console.log(row);
 //    }
 //}
 const isArrayEqual = (randomArray, arraySelect) => {
-    if (randomArray.length !== arraySelect.length) {
-        alert ('Te falta seleccionar algun color');
-        return true;
-    }
-    return false; 
-};
-if (isArrayEqual(randomArray, arraySelect) === true){
-    checkButtom
+    return randomArray.length === arraySelect.length;
 }
+//const arraysVerify = () => {
+//    const button = document.getElementById('check');
+//    if (isArrayEqual(randomArray, arraySelect)) {
+//        button.disabled = false; // Habilitar el botón
+//    } else {
+//        alert("Los arrays no son iguales");
+//        button.disabled = true; // Deshabilitar el botón
+//    }
+//}
+
 const checkButtom = document.getElementById('check');
 checkButtom.addEventListener('click', () => {
-    if (isArrayEqual(randomArray, arraySelect) === true){
-        if(JSON.stringify(arraySelect) === JSON.stringify(randomArray)){
-            window.location.href = './winner.html';
-            row = 0;
-        }else {
-            row++;
-            console.log(row);
-        
-            if (row === 1) {
-                if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check11.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check11.style.backgroundColor = 'orange'
-                    } else {
-                        check11.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check12.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check11.style.backgroundColor = 'orange'
-                    } else {
-                        check12.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check13.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check11.style.backgroundColor = 'orange'
-                    } else {
-                        check13.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check14.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])) {
-                        check11.style.backgroundColor = 'orange'
-                    }else {
-                        check14.style.backgroundColor = 'white'
-                    }
-
-                    //rowColorClick(row1Color1, row1Color2, row1Color3, row1Color4);
-                    //row++;
-                    //stopEvents(row1Color1, row1Color2, row1Color3, row1Color4)
-
+    
+    if(JSON.stringify(arraySelect) === JSON.stringify(randomArray)){
+        window.location.href = './winner.html';
+        row = 0;
+    }else {
+        row++;
+        console.log(row);
+    
+        if (row === 1) {
+            if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check11.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check11.style.backgroundColor = 'orange'
+                } else {
+                    check11.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[1] === randomArray[1]) {
+                    check12.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check11.style.backgroundColor = 'orange'
+                } else {
+                    check12.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check13.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check11.style.backgroundColor = 'orange'
+                } else {
+                    check13.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check14.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])) {
+                    check11.style.backgroundColor = 'orange'
+                }else {
+                    check14.style.backgroundColor = 'white'
+                }
+                //rowColorClick(row1Color1, row1Color2, row1Color3, row1Color4);
+                //row++;
+                //stopEvents(row1Color1, row1Color2, row1Color3, row1Color4)
             }
-            if (row === 2) {
-                if (empty(row2Color1, row2Color2, row2Color3, row2Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check21.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check21.style.backgroundColor = 'orange'
-                    }else {
-                        check21.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check22.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check21.style.backgroundColor = 'orange'
-                    }else {
-                        check22.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check23.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check21.style.backgroundColor = 'orange'
-                    }else {
-                        check23.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check24.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check21.style.backgroundColor = 'orange'
-                    }else {
-                        check24.style.backgroundColor = 'white'
-                    }
-                    //selectColor(row2Color1, row2Color2, row2Color3, row2Color4);
-                    //row++;
-                    //stopEvents(row2Color1, row2Color2, row2Color3, row2Color4)
-                
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 2) {
+            if (empty(row2Color1, row2Color2, row2Color3, row2Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check21.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check21.style.backgroundColor = 'orange'
+                }else {
+                    check21.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
-            }     
-            if (row === 3) {
-                if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check31.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check31.style.backgroundColor = 'orange'
-                    }else {
-                        check31.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check32.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check31.style.backgroundColor = 'orange'
-                    }else {
-                        check32.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check33.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check21.style.backgroundColor = 'orange'
-                    }else {
-                        check33.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check34.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check31.style.backgroundColor = 'orange'
-                    }else {
-                        check34.style.backgroundColor = 'white'
-                    }
-                
+                if (arraySelect[1] === randomArray[1]) {
+                    check22.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check21.style.backgroundColor = 'orange'
+                }else {
+                    check22.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[2] === randomArray[2]) {
+                    check23.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check21.style.backgroundColor = 'orange'
+                }else {
+                    check23.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check24.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check21.style.backgroundColor = 'orange'
+                }else {
+                    check24.style.backgroundColor = 'white'
+                }
+                //selectColor(row2Color1, row2Color2, row2Color3, row2Color4);
+                //row++;
+                //stopEvents(row2Color1, row2Color2, row2Color3, row2Color4)
+            
             }
-            if (row === 4) {
-                if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check41.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check41.style.backgroundColor = 'orange'
-                    }else {
-                        check41.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check42.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check41.style.backgroundColor = 'orange'
-                    }else {
-                        check42.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check43.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check41.style.backgroundColor = 'orange'
-                    }else {
-                        check43.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check44.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check41.style.backgroundColor = 'orange'
-                    }else {
-                        check44.style.backgroundColor = 'white'
-                    }
-                
+            arraySelect = ['', '', '', ''];
+        }     
+        if (row === 3) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check31.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check31.style.backgroundColor = 'orange'
+                }else {
+                    check31.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[1] === randomArray[1]) {
+                    check32.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check31.style.backgroundColor = 'orange'
+                }else {
+                    check32.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check33.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check21.style.backgroundColor = 'orange'
+                }else {
+                    check33.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check34.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check31.style.backgroundColor = 'orange'
+                }else {
+                    check34.style.backgroundColor = 'white'
+                }
+            
             }
-            if (row === 5) {
-                if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check51.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check51.style.backgroundColor = 'orange'
-                    }else {
-                        check51.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check52.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check51.style.backgroundColor = 'orange'
-                    }else {
-                        check52.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check53.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check51.style.backgroundColor = 'orange'
-                    }else {
-                        check53.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check54.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check51.style.backgroundColor = 'orange'
-                    }else {
-                        check54.style.backgroundColor = 'white'
-                    }
-                
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 4) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check41.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check41.style.backgroundColor = 'orange'
+                }else {
+                    check41.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[1] === randomArray[1]) {
+                    check42.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check41.style.backgroundColor = 'orange'
+                }else {
+                    check42.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check43.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check41.style.backgroundColor = 'orange'
+                }else {
+                    check43.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check44.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check41.style.backgroundColor = 'orange'
+                }else {
+                    check44.style.backgroundColor = 'white'
+                }
+            
             }
-            if (row === 6) {
-                if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check61.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check61.style.backgroundColor = 'orange'
-                    }else {
-                        check61.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check62.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check61.style.backgroundColor = 'orange'
-                    }else {
-                        check62.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check63.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check61.style.backgroundColor = 'orange'
-                    }else {
-                        check63.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check64.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check61.style.backgroundColor = 'orange'
-                    }else {
-                        check64.style.backgroundColor = 'white'
-                    }
-
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 5) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check51.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check51.style.backgroundColor = 'orange'
+                }else {
+                    check51.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[1] === randomArray[1]) {
+                    check52.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check51.style.backgroundColor = 'orange'
+                }else {
+                    check52.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check53.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check51.style.backgroundColor = 'orange'
+                }else {
+                    check53.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check54.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check51.style.backgroundColor = 'orange'
+                }else {
+                    check54.style.backgroundColor = 'white'
+                }
+            
             }
-            if (row === 7) {
-                if (empty( row2Color1, row2Color2, row2Color3, row2Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check71.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check71.style.backgroundColor = 'orange'
-                    }else {
-                        check71.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check72.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check71.style.backgroundColor = 'orange'
-                    }else {
-                        check72.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check73.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check71.style.backgroundColor = 'orange'
-                    }else {
-                        check73.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check74.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check71.style.backgroundColor = 'orange'
-                    }else {
-                        check74.style.backgroundColor = 'white'
-                    }
-                
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 6) {
+            if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check61.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check61.style.backgroundColor = 'orange'
+                }else {
+                    check61.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
-            }     
-            if (row === 8) {
-                if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check81.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check81.style.backgroundColor = 'orange'
-                    }else {
-                        check81.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check82.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check81.style.backgroundColor = 'orange'
-                    }else {
-                        check82.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check83.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check81.style.backgroundColor = 'orange'
-                    }else {
-                        check83.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check84.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check81.style.backgroundColor = 'orange'
-                    }else {
-                        check84.style.backgroundColor = 'white'
-                    }
-                
+                if (arraySelect[1] === randomArray[1]) {
+                    check62.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check61.style.backgroundColor = 'orange'
+                }else {
+                    check62.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[2] === randomArray[2]) {
+                    check63.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check61.style.backgroundColor = 'orange'
+                }else {
+                    check63.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check64.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check61.style.backgroundColor = 'orange'
+                }else {
+                    check64.style.backgroundColor = 'white'
+                }
             }
-            if (row === 9) {
-                if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check91.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check91.style.backgroundColor = 'orange'
-                    }else {
-                        check91.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check92.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check91.style.backgroundColor = 'orange'
-                    }else {
-                        check92.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check93.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check91.style.backgroundColor = 'orange'
-                    }else {
-                        check93.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check94.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check91.style.backgroundColor = 'orange'
-                    }else {
-                        check94.style.backgroundColor = 'white'
-                    }
-                
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 7) {
+            if (empty( row2Color1, row2Color2, row2Color3, row2Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check71.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check71.style.backgroundColor = 'orange'
+                }else {
+                    check71.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
-            }
-            if (row === 10) {
-                if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                    alert("¡Falta un color!");
-                } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
-                { 
-                    if (arraySelect[0] === randomArray[0]) {
-                        check101.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[0])) {
-                        check101.style.backgroundColor = 'orange'
-                    }else {
-                        check101.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[1] === randomArray[1]) {
-                        check102.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[1])) {
-                        check101.style.backgroundColor = 'orange'
-                    }else {
-                        check102.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[2] === randomArray[2]) {
-                        check103.style.backgroundColor = 'green'
-                    }  else if (randomArray.includes(arraySelect[2])) {
-                        check101.style.backgroundColor = 'orange'
-                    }else {
-                        check103.style.backgroundColor = 'white'
-                    }
-                    if (arraySelect[3] === randomArray[3]) {
-                        check104.style.backgroundColor = 'green'
-                    } else if (randomArray.includes(arraySelect[3])){
-                        check101.style.backgroundColor = 'orange'
-                    }else {
-                        check104.style.backgroundColor = 'white'
-                    }
-                
+                if (arraySelect[1] === randomArray[1]) {
+                    check72.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check71.style.backgroundColor = 'orange'
+                }else {
+                    check72.style.backgroundColor = 'white'
                 }
-                arraySelect = ['', '', '', ''];
+                if (arraySelect[2] === randomArray[2]) {
+                    check73.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check71.style.backgroundColor = 'orange'
+                }else {
+                    check73.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check74.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check71.style.backgroundColor = 'orange'
+                }else {
+                    check74.style.backgroundColor = 'white'
+                }
+            
             }
-        }  
-    }       
+            arraySelect = ['', '', '', ''];
+        }     
+        if (row === 8) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check81.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check81.style.backgroundColor = 'orange'
+                }else {
+                    check81.style.backgroundColor = 'white'
+                }
+                if (arraySelect[1] === randomArray[1]) {
+                    check82.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check81.style.backgroundColor = 'orange'
+                }else {
+                    check82.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check83.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check81.style.backgroundColor = 'orange'
+                }else {
+                    check83.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check84.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check81.style.backgroundColor = 'orange'
+                }else {
+                    check84.style.backgroundColor = 'white'
+                }
+            
+            }
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 9) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check91.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check91.style.backgroundColor = 'orange'
+                }else {
+                    check91.style.backgroundColor = 'white'
+                }
+                if (arraySelect[1] === randomArray[1]) {
+                    check92.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check91.style.backgroundColor = 'orange'
+                }else {
+                    check92.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check93.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check91.style.backgroundColor = 'orange'
+                }else {
+                    check93.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check94.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check91.style.backgroundColor = 'orange'
+                }else {
+                    check94.style.backgroundColor = 'white'
+                }
+            
+            }
+            arraySelect = ['', '', '', ''];
+        }
+        if (row === 10) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check101.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check101.style.backgroundColor = 'orange'
+                }else {
+                    check101.style.backgroundColor = 'white'
+                }
+                if (arraySelect[1] === randomArray[1]) {
+                    check102.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check101.style.backgroundColor = 'orange'
+                }else {
+                    check102.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check103.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check101.style.backgroundColor = 'orange'
+                }else {
+                    check103.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check104.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])){
+                    check101.style.backgroundColor = 'orange'
+                }else {
+                    check104.style.backgroundColor = 'white'
+                }
+            
+            }
+            arraySelect = ['', '', '', ''];
+        }
+    }  
+           
    
     if (row === 11) {   
         localStorage.setItem('randomArray', JSON.stringify(randomArray));
