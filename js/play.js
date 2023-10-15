@@ -56,6 +56,7 @@ document.getElementById('box4').addEventListener('click', function () {
     const choiceColor = window.getComputedStyle(this).backgroundColor;
     const hexColor = rgbToHex(choiceColor);
     localStorage.setItem('choiceColor', hexColor);
+     
 });
 const rgbToHex = (rgb) => {
     const value = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -67,259 +68,285 @@ const rgbToHex = (rgb) => {
 };
 
 //Obtener los cuatro divs de selccion diferentes por sus IDs
-const row1Color1 = document.getElementById('color0-1');
+const row1Color1 = document.getElementById('color1-0');
 const row1Color2 = document.getElementById('color1-1');
-const row1Color3 = document.getElementById('color2-1');
-const row1Color4 = document.getElementById('color3-1');
-const row2Color1 = document.getElementById('color0-2');
-const row2Color2 = document.getElementById('color1-2');
+const row1Color3 = document.getElementById('color1-2');
+const row1Color4 = document.getElementById('color1-3');
+const row2Color1 = document.getElementById('color2-0');
+const row2Color2 = document.getElementById('color2-1');
 const row2Color3 = document.getElementById('color2-2');
-const row2Color4 = document.getElementById('color3-2');
-const row3Color1 = document.getElementById('color0-3');
-const row3Color2 = document.getElementById('color1-3');
-const row3Color3 = document.getElementById('color2-3');
+const row2Color4 = document.getElementById('color2-3');
+const row3Color1 = document.getElementById('color3-0');
+const row3Color2 = document.getElementById('color3-1');
+const row3Color3 = document.getElementById('color3-2');
 const row3Color4 = document.getElementById('color3-3');
-const row4Color1 = document.getElementById('color0-4');
-const row4Color2 = document.getElementById('color1-4');
-const row4Color3 = document.getElementById('color2-4');
-const row4Color4 = document.getElementById('color3-4');
-const row5Color1 = document.getElementById('color0-5');
-const row5Color2 = document.getElementById('color1-5');
-const row5Color3 = document.getElementById('color2-5');
-const row5Color4 = document.getElementById('color3-5');
-const row6Color1 = document.getElementById('color0-6');
-const row6Color2 = document.getElementById('color1-6');
-const row6Color3 = document.getElementById('color2-6');
-const row6Color4 = document.getElementById('color3-6');
-const row7Color1 = document.getElementById('color0-7');
-const row7Color2 = document.getElementById('color1-7');
-const row7Color3 = document.getElementById('color2-7');
-const row7Color4 = document.getElementById('color3-7');
-const row8Color1 = document.getElementById('color0-8');
-const row8Color2 = document.getElementById('color1-8');
-const row8Color3 = document.getElementById('color2-8');
-const row8Color4 = document.getElementById('color3-8');
-const row9Color1 = document.getElementById('color0-9');
-const row9Color2 = document.getElementById('color1-9');
-const row9Color3 = document.getElementById('color2-9');
-const row9Color4 = document.getElementById('color3-9');
-const row10Color1 = document.getElementById('color0-10');
-const row10Color2 = document.getElementById('color1-10');
-const row10Color3 = document.getElementById('color2-10');
-const row10Color4 = document.getElementById('color3-10');
+const row4Color1 = document.getElementById('color4-0');
+const row4Color2 = document.getElementById('color4-1');
+const row4Color3 = document.getElementById('color4-2');
+const row4Color4 = document.getElementById('color4-3');
+const row5Color1 = document.getElementById('color5-0');
+const row5Color2 = document.getElementById('color5-1');
+const row5Color3 = document.getElementById('color5-2');
+const row5Color4 = document.getElementById('color5-3');
+const row6Color1 = document.getElementById('color6-0');
+const row6Color2 = document.getElementById('color6-1');
+const row6Color3 = document.getElementById('color6-2');
+const row6Color4 = document.getElementById('color6-3');
+const row7Color1 = document.getElementById('color7-0');
+const row7Color2 = document.getElementById('color7-1');
+const row7Color3 = document.getElementById('color7-2');
+const row7Color4 = document.getElementById('color7-3');
+const row8Color1 = document.getElementById('color8-0');
+const row8Color2 = document.getElementById('color8-1');
+const row8Color3 = document.getElementById('color8-2');
+const row8Color4 = document.getElementById('color8-3');
+const row9Color1 = document.getElementById('color9-0');
+const row9Color2 = document.getElementById('color9-1');
+const row9Color3 = document.getElementById('color9-2');
+const row9Color4 = document.getElementById('color9-3');
+const row10Color1 = document.getElementById('color10-0');
+const row10Color2 = document.getElementById('color10-1');
+const row10Color3 = document.getElementById('color10-2');
+const row10Color4 = document.getElementById('color10-3');
 // Agregar un evento clic a cada uno de los divs
-row1Color1.addEventListener('click', function () {
+let  row = 0;
+const rowColorClick = function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
-});
-row1Color2.addEventListener('click', function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-row1Color3.addEventListener('click', function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-row1Color4.addEventListener("click", function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-row2Color1.addEventListener('click', function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-row2Color2.addEventListener('click', function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-row2Color3.addEventListener('click', function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-row2Color4.addEventListener("click", function () {
-    const choiceColor = localStorage.getItem('choiceColor');
-    this.style.backgroundColor = choiceColor;
-});
-////row3Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row3Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row3Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row3Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row4Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row4Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row4Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row4Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row5Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row5Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row5Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row5Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row6Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row6Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row6Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row6Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row7Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row7Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row7Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row7Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row8Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row8Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row8Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row8Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row9Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row9Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row9Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row9Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-////row10Color1.addEventListener('click', function () {
-////    const choiceColor = localStorage.getItem('choiceColor');
-////    this.style.backgroundColor = choiceColor;
-////});
-//row10Color2.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row10Color3.addEventListener('click', function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-//row10Color4.addEventListener("click", function () {
-//    const choiceColor = localStorage.getItem('choiceColor');
-//    this.style.backgroundColor = choiceColor;
-//});
-const arraySelect = ['', '', '', ''];
-boxes = document.querySelectorAll('.box');
-boxes.forEach(box => {
-    box.addEventListener('click', () => {
+};
+row1Color1.addEventListener('click', rowColorClick);
+row1Color2.addEventListener('click', rowColorClick);
+row1Color3.addEventListener('click', rowColorClick);
+row1Color4.addEventListener('click', rowColorClick);
+row2Color1.addEventListener('click', rowColorClick);
+row2Color2.addEventListener('click', rowColorClick);
+row2Color3.addEventListener('click', rowColorClick);
+row2Color4.addEventListener('click', rowColorClick);
+row3Color1.addEventListener('click', rowColorClick);
+row3Color2.addEventListener('click', rowColorClick);
+row3Color3.addEventListener('click', rowColorClick);
+row3Color4.addEventListener('click', rowColorClick);
+
+
+let arraySelect = ['', '', '', ''];
+    const boxes = document.querySelectorAll('.box');
+        boxes.forEach(box => {
+        box.addEventListener('click', () => {
         const id = box.getAttribute('id');
-        const idlength = id[id.length - 3];
-        console.log(idlength);
+        const idlength = id[id.length - 1];
         const hexColor = rgbToHex(box.style.backgroundColor);
         arraySelect[idlength] = hexColor
         console.log(arraySelect);
+        })  
     });
-});
-let  row = 1;
-
+console.log(row);
 //comprobar array
-const checkButton = document.getElementById('check');
-checkButton.addEventListener('click', () => {
-    
-    
-    //console.log(arraySelect);
-    //console.log(randomArray);
+const check11 = document.getElementById('check1-1');
+const check12 = document.getElementById('check2-1');
+const check13 = document.getElementById('check3-1');
+const check14 = document.getElementById('check4-1');
+const check21 = document.getElementById('check1-2');
+const check22 = document.getElementById('check2-2');
+const check23 = document.getElementById('check3-2');
+const check24 = document.getElementById('check4-2');
+const check31 = document.getElementById('check1-3');
+const check32 = document.getElementById('check2-3');
+const check33 = document.getElementById('check3-3');
+const check34 = document.getElementById('check4-3');
+const check41 = document.getElementById('check1-4');
+const check42 = document.getElementById('check2-4');
+const check43 = document.getElementById('check3-4');
+const check44 = document.getElementById('check4-4');
+
+
+const stopEvents = (select1, select2, select3, select4) => {
+    select1.style.pointerEvents = "none";
+    select2.style.pointerEvents = "none";
+    select3.style.pointerEvents = "none";
+    select4.style.pointerEvents = "none";
+}
+const backgroundCircule = (circle) => {
+    return window.getComputedStyle(circle).backgroundColor
+}
+const empty = (select1, select2, select3, select4) => {
+    if (backgroundCircule(select1) ===    'white'
+        || backgroundCircule(select2) === 'white'
+        || backgroundCircule(select3) === 'white'
+        || backgroundCircule(select4) === 'white') {
+        return true;
+    }
+}
+
+// console.log("estp es mi color" +  arraySelect[0]);
+
+//rowColorClick (row1Color1, row1Color2, row1Color3, row1Color4);
+//rowColorClick(row2Color1, row2Color2, row2Color3, row2Color4);
+
+const checkButtom = document.getElementById('check');
+checkButtom.addEventListener('click', () => {
     if(JSON.stringify(arraySelect) === JSON.stringify(randomArray)){
         window.location.href = './winner.html';
-        //console.log('ganador');
-        row = 1;
-    } else {
-        row++
-    }
+        row = 0;
+    }else {
+        row++;
+       console.log(row);
+    
+        if (row === 1) {
+            if (empty(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
+            { 
+                if (arraySelect[0] === randomArray[0]) {
+                    check11.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[0])) {
+                    check11.style.backgroundColor = 'orange'
+                } else {
+                    check11.style.backgroundColor = 'white'
+                }
+                if (arraySelect[1] === randomArray[1]) {
+                    check22.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[1])) {
+                    check11.style.backgroundColor = 'orange'
+                }  else {
+                    check12.style.backgroundColor = 'white'
+                }
+                if (arraySelect[2] === randomArray[2]) {
+                    check13.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(arraySelect[2])) {
+                    check11.style.backgroundColor = 'orange'
+                } else {
+                    check13.style.backgroundColor = 'white'
+                }
+                if (arraySelect[3] === randomArray[3]) {
+                    check14.style.backgroundColor = 'green'
+                } else if (randomArray.includes(arraySelect[3])) {
+                    check11.style.backgroundColor = 'orange'
+                }else {
+                    check14.style.backgroundColor = 'white'
+                }
+                //if (check1.style.backgroundColor == 'green' &&
+                //    check2.style.backgroundColor == 'green' &&
+                //    check3.style.backgroundColor == 'green' &&
+                //    check4.style.backgroundColor == 'green') {
+                //    window.location.href = './winner.html'
+                //}
+                //rowColorClick(row1Color1, row1Color2, row1Color3, row1Color4);
+                //row++;
+                //stopEvents(row1Color1, row1Color2, row1Color3, row1Color4)
 
-    // if (arraySelect.every ((color) => color !== "")) {
-    //     comprobar(randomArray, arraySelect);
+            }
 
-    // } else {
-    //     alert("Introduce todos los colores")
-    // }
+        }
+        console.log(row);
+
+        if (row === 2) {
+            if (empty( row2Color1, row2Color2, row2Color3, row2Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+            { 
+                if (rgbToHex(row2Color1.style.backgroundColor) === randomArray[0]) {
+                    check21.style.backgroundColor = 'green'
+                } else if (randomArray.includes(rgbToHex(row2Color1.style.backgroundColor))) {
+                    check21.style.backgroundColor = 'orange'
+                } else {
+                    check21.style.backgroundColor = 'white'
+                }
+                if (rgbToHex(row2Color2.style.backgroundColor) === randomArray[1]) {
+                    check22.style.backgroundColor = 'green'
+                } else if (randomArray.includes(rgbToHex(row2Color2.style.backgroundColor))) {
+                    check21.style.backgroundColor = 'orange'
+                }  else {
+                    check22.style.backgroundColor = 'white'
+                }
+                if (rgbToHex(row2Color3.style.backgroundColor) === randomArray[2]) {
+                    check23.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(rgbToHex(row2Color3.style.backgroundColor))) {
+                    check21.style.backgroundColor = 'orange'
+                } else {
+                    check23.style.backgroundColor = 'white'
+                }
+                if (rgbToHex(row2Color4.style.backgroundColor) === randomArray[3]) {
+                    check24.style.backgroundColor = 'green'
+                } else if (randomArray.includes(rgbToHex(row2Color4.style.backgroundColor))) {
+                    check21.style.backgroundColor = 'orange'
+                }else {
+                    check24.style.backgroundColor = 'white'
+                }
+                //if (check5.style.backgroundColor == 'green' &&
+                //    check6.style.backgroundColor == 'green' &&
+                //    check7.style.backgroundColor == 'green' &&
+                //    check8.style.backgroundColor == 'green') {
+                //    window.location.href = './winner.html'
+                //}
+
+                //selectColor(row2Color1, row2Color2, row2Color3, row2Color4);
+                //row++;
+                //stopEvents(row2Color1, row2Color2, row2Color3, row2Color4)
+            
+            }
+
+
+        }     
+    
+
+        if (row === 3) {
+            if (empty( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
+                alert("¡Falta un color!");
+            } else if (empty(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            { 
+                if (rgbToHex(row3Color1.style.backgroundColor) === randomArray[0]) {
+                    check31.style.backgroundColor = 'green'
+                } else if (randomArray.includes(rgbToHex(row3Color1.style.backgroundColor))) {
+                    check31.style.backgroundColor = 'orange'
+                } else {
+                    check31.style.backgroundColor = 'white'
+                }
+                if (rgbToHex(row3Color2.style.backgroundColor) === randomArray[1]) {
+                    check32.style.backgroundColor = 'green'
+                } else if (randomArray.includes(rgbToHex(row3Color2.style.backgroundColor))) {
+                    check31.style.backgroundColor = 'orange'
+                }  else {
+                    check32.style.backgroundColor = 'white'
+                }
+                if (rgbToHex(row3Color3.style.backgroundColor) === randomArray[2]) {
+                    check33.style.backgroundColor = 'green'
+                }  else if (randomArray.includes(rgbToHex(row3Color3.style.backgroundColor))) {
+                    check31.style.backgroundColor = 'orange'
+                } else {
+                    check33.style.backgroundColor = 'white'
+                }
+                if (rgbToHex(row3Color4.style.backgroundColor) === randomArray[3]) {
+                    check34.style.backgroundColor = 'green'
+                } else if (randomArray.includes(rgbToHex(row3Color4.style.backgroundColor))) {
+                    check31.style.backgroundColor = 'orange'
+                }else {
+                    check34.style.backgroundColor = 'white'
+                }
+
+                //selectColor(row2Color1, row2Color2, row2Color3, row2Color4);
+                //row++;
+                //stopEvents(row2Color1, row2Color2, row2Color3, row2Color4)
+            
+            }
+
+
+        }
+
+    }     
     
 });
-
 //const isArrayEqual = (randomArray, arraySelect) => {
-//if (randomArray.length !== arraySelect.length) {
-//    return; 'Te falta seleccionar algun color';
-//}
-//function comprobar(randomArray, arraySelect){
-//    for (let i = 0; i < 4; i++) {
-//        let check = document.getElementbyId(`check${i}`);
-//        if (randomArray[i] === arraySelect[i]) {
-//            check.style.backgroundColor = 'white';
-//        } else if (randomArray.includes(arraySelect[i])) {
-//            check.style.backgroundColor = 'black';
+//    if (randomArray.length !== arraySelect.length) {
+//        return; 'Te falta seleccionar algun color';
+//    }
+//    function comprobar(randomArray, arraySelect){
+//        for (let i = 0; i < 4; i++) {
+//            let check = document.getElementbyId(`check${i}`);
+//            if (randomArray[i] === arraySelect[i]) {
+//                check.style.backgroundColor = 'white';
+//            } else if (randomArray.includes(arraySelect[i])) {
+//                check.style.backgroundColor = 'black';
+//            }
 //        }
 //    }
 //};
-//isArrayEqual(randomArray, arraySelect);
-
-

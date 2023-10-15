@@ -172,7 +172,7 @@ button:hover {
     width: 30vw
 }
 
-#color0-1 {
+#color1-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -186,26 +186,18 @@ button:hover {
     border-radius: 20%;
 }
 
-#color2-1 {
+#color1-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-1 {
+#color1-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
-}
-
-#check0-1 {
-    height: 2em;
-    width: 2em;
-    border: 0.15em solid white;
-    border-radius: 50%;
-
 }
 
 #check1-1 {
@@ -213,6 +205,7 @@ button:hover {
     width: 2em;
     border: 0.15em solid white;
     border-radius: 50%;
+
 }
 
 #check2-1 {
@@ -229,14 +222,21 @@ button:hover {
     border-radius: 50%;
 }
 
-#color0-2 {
+#check4-1 {
+    height: 2em;
+    width: 2em;
+    border: 0.15em solid white;
+    border-radius: 50%;
+}
+
+#color2-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color1-2 {
+#color2-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -250,7 +250,7 @@ button:hover {
     border-radius: 20%;
 }
 
-#color3-2 {
+#color2-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -285,14 +285,21 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-3 {
+#color3-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-3 {
+#color3-1 {
+    height: 2em;
+    width: 2em;
+    border: 0.15em solid white;
+    border-radius: 20%;
+}
+
+#color3-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -300,13 +307,6 @@ button:hover {
 }
 
 #color3-3 {
-    height: 2em;
-    width: 2em;
-    border: 0.15em solid white;
-    border-radius: 20%;
-}
-
-#color4-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -341,28 +341,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-4 {
+#color4-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-4 {
+#color4-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-4 {
+#color4-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-4 {
+#color4-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -397,28 +397,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-5 {
+#color5-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-5 {
+#color5-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-5 {
+#color5-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-5 {
+#color5-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -453,28 +453,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-6 {
+#color6-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-6 {
+#color6-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-6 {
+#color6-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-6 {
+#color6-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -509,28 +509,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-7 {
+#color7-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-7 {
+#color7-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-7 {
+#color7-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-7 {
+#color7-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -565,28 +565,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-8 {
+#color8-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-8 {
+#color8-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-8 {
+#color8-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-8 {
+#color8-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -621,28 +621,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-9 {
+#color9-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-9 {
+#color9-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-9 {
+#color9-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-9 {
+#color9-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
@@ -677,28 +677,28 @@ button:hover {
     border-radius: 50%;
 }
 
-#color1-10 {
+#color10-0 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color2-10 {
+#color10-1 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color3-10 {
+#color10-2 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
     border-radius: 20%;
 }
 
-#color4-10 {
+#color10-3 {
     height: 2em;
     width: 2em;
     border: 0.15em solid white;
