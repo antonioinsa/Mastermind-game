@@ -40,7 +40,6 @@ const row10Color2 = document.getElementById('color10-1');
 const row10Color3 = document.getElementById('color10-2');
 const row10Color4 = document.getElementById('color10-3');
 // Agregar un evento clic a cada uno de los divs
-let  row = 0;
 const rowColorClick = function () {
     const choiceColor = localStorage.getItem('choiceColor');
     this.style.backgroundColor = choiceColor;
@@ -158,10 +157,7 @@ for (let i = 0; i < numberRandomElements; i++) {
     const randomElement = colorsArray[randomIndex];
     randomArray.push(randomElement);
 }
-// Imprimir el nuevo array con elementos aleatorios
-console.log("combinacion ganadora", randomArray);
-
-
+//console.log("combinacion ganadora", randomArray);
 // Agregar evento clic al div de selección
 document.getElementById('box1').addEventListener('click', function () {
     const choiceColor = window.getComputedStyle(this).backgroundColor;
@@ -191,6 +187,21 @@ const rgbToHex = (rgb) => {
     const b = parseInt(value[3]).toString(16).padStart(2, '0');
     return `#${r}${g}${b}`;
 };
+let  row = 0;
+let numRow = 1;
+//Deshabilito row's
+const selectRow = (rowNumber) => {
+    for (let i = 1; i <= 10; i++) {
+        const rowElement = document.querySelector('.row' + i);
+        rowElement.style.pointerEvents = "none";
+        rowElement.style.opacity = "0.5";
+    }
+    // Habilito row específico
+    const selectedRow = document.querySelector('.row' + rowNumber);
+    selectedRow.style.pointerEvents = "auto";
+    selectedRow.style.opacity = "1";
+}
+selectRow(numRow);
 //Array de selccion
 let arraySelect = ['', '', '', ''];
     const boxes = document.querySelectorAll('.box');
@@ -204,427 +215,307 @@ let arraySelect = ['', '', '', ''];
         })  
     });
 console.log(row);
-
-
-
-//const stopEvents = (select1, select2, select3, select4) => {
-//    select1.style.pointerEvents = "none";
-//    select2.style.pointerEvents = "none";
-//    select3.style.pointerEvents = "none";
-//    select4.style.pointerEvents = "none";
-//}
-//const backgroundCircule = (circle) => {
-//    return window.getComputedStyle(circle).backgroundColor
-//}
-//const empty = (select1, select2, select3, select4) => {
-//    if (backgroundCircule(select1) ===    'white'
-//        || backgroundCircule(select2) === 'white'
-//        || backgroundCircule(select3) === 'white'
-//        || backgroundCircule(select4) === 'white') {
-//       return true;
-//    }
-//}
-const isArrayEqual = (randomArray, arraySelect) => {
-    return randomArray.length !== arraySelect.length;
-}
-//const arraysVerify = () => {
-//    const button = document.getElementById('check');
-//    if (isArrayEqual(randomArray, arraySelect)) {
-//        button.disabled = false; // Habilitar el botón
-//    } else {
-//        alert("Los arrays no son iguales");
-//        button.disabled = true; // Deshabilitar el botón
-//    }
-//}
-
 const checkButtom = document.getElementById('check');
 checkButtom.addEventListener('click', () => {
-    
     if(JSON.stringify(arraySelect) === JSON.stringify(randomArray)){
         window.location.href = './winner.html';
         row = 0;
     }else {
         row++;
-        console.log(row);
-    
+        numRow = 'row' + row;
         if (row === 1) {
-            if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
-                row===-1
+            if (arraySelect.length !== randomArray.length) {
                 alert("¡Falta algun color!");
-            } else if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
+                return;
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check11.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check11.style.backgroundColor = 'orange'
-                } else {
-                    check11.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check12.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check11.style.backgroundColor = 'orange'
-                } else {
-                    check12.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check13.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check11.style.backgroundColor = 'orange'
-                } else {
-                    check13.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check14.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])) {
                     check11.style.backgroundColor = 'orange'
-                }else {
-                    check14.style.backgroundColor = 'white'
                 }
-                //rowColorClick(row1Color1, row1Color2, row1Color3, row1Color4);
-                //row++;
-                //stopEvents(row1Color1, row1Color2, row1Color3, row1Color4)
+                selectRow(1);
             }
             arraySelect = ['', '', '', ''];
         }
         if (row === 2) {
-            if (isArrayEqual(row2Color1, row2Color2, row2Color3, row2Color4) === true) {
+            if (randomArray.length !== arraySelect.length) {
                 alert("¡Falta algun color!");
-            } else if (isArrayEqual(row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+                return;
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check21.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check21.style.backgroundColor = 'orange'
-                }else {
-                    check21.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check22.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check21.style.backgroundColor = 'orange'
-                }else {
-                    check22.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check23.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check21.style.backgroundColor = 'orange'
-                }else {
-                    check23.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check24.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check21.style.backgroundColor = 'orange'
-                }else {
-                    check24.style.backgroundColor = 'white'
                 }
-                //selectColor(row2Color1, row2Color2, row2Color3, row2Color4);
-                //row++;
-                //stopEvents(row2Color1, row2Color2, row2Color3, row2Color4)
-            
+                selectRow(2);
             }
             arraySelect = ['', '', '', ''];
         }     
         if (row === 3) {
-            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check31.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check31.style.backgroundColor = 'orange'
-                }else {
-                    check31.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check32.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check31.style.backgroundColor = 'orange'
-                }else {
-                    check32.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check33.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check21.style.backgroundColor = 'orange'
-                }else {
-                    check33.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check34.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check31.style.backgroundColor = 'orange'
-                }else {
-                    check34.style.backgroundColor = 'white'
                 }
-            
+                selectRow(3);
             }
-            arraySelect = ['', '', '', ''];
+            arraySelect = ['', '', '', ''];   
         }
         if (row === 4) {
-            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check41.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check41.style.backgroundColor = 'orange'
-                }else {
-                    check41.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check42.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check41.style.backgroundColor = 'orange'
-                }else {
-                    check42.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check43.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check41.style.backgroundColor = 'orange'
-                }else {
-                    check43.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check44.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check41.style.backgroundColor = 'orange'
-                }else {
-                    check44.style.backgroundColor = 'white'
                 }
-            
+                selectRow(4);
             }
             arraySelect = ['', '', '', ''];
         }
         if (row === 5) {
-            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check51.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check51.style.backgroundColor = 'orange'
-                }else {
-                    check51.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check52.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check51.style.backgroundColor = 'orange'
-                }else {
-                    check52.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check53.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check51.style.backgroundColor = 'orange'
-                }else {
-                    check53.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check54.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check51.style.backgroundColor = 'orange'
-                }else {
-                    check54.style.backgroundColor = 'white'
                 }
-            
+                selectRow(5);
             }
             arraySelect = ['', '', '', ''];
         }
         if (row === 6) {
-            if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(row1Color1, row1Color2, row1Color3, row1Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check61.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check61.style.backgroundColor = 'orange'
-                }else {
-                    check61.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check62.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check61.style.backgroundColor = 'orange'
-                }else {
-                    check62.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check63.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check61.style.backgroundColor = 'orange'
-                }else {
-                    check63.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check64.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check61.style.backgroundColor = 'orange'
-                }else {
-                    check64.style.backgroundColor = 'white'
                 }
+                selectRow(6);
             }
             arraySelect = ['', '', '', ''];
         }
         if (row === 7) {
-            if (isArrayEqual( row2Color1, row2Color2, row2Color3, row2Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row2Color1, row2Color2, row2Color3, row2Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check71.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check71.style.backgroundColor = 'orange'
-                }else {
-                    check71.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check72.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check71.style.backgroundColor = 'orange'
-                }else {
-                    check72.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check73.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check71.style.backgroundColor = 'orange'
-                }else {
-                    check73.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check74.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check71.style.backgroundColor = 'orange'
-                }else {
-                    check74.style.backgroundColor = 'white'
                 }
-            
+                selectRow(7);
             }
             arraySelect = ['', '', '', ''];
         }     
         if (row === 8) {
-            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length)  
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check81.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check81.style.backgroundColor = 'orange'
-                }else {
-                    check81.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check82.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check81.style.backgroundColor = 'orange'
-                }else {
-                    check82.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check83.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check81.style.backgroundColor = 'orange'
-                }else {
-                    check83.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check84.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check81.style.backgroundColor = 'orange'
-                }else {
-                    check84.style.backgroundColor = 'white'
                 }
-            
+                selectRow(8);
             }
             arraySelect = ['', '', '', ''];
         }
         if (row === 9) {
-            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length)  
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check91.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check91.style.backgroundColor = 'orange'
-                }else {
-                    check91.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check92.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check91.style.backgroundColor = 'orange'
-                }else {
-                    check92.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check93.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check91.style.backgroundColor = 'orange'
-                }else {
-                    check93.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check94.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check91.style.backgroundColor = 'orange'
-                }else {
-                    check94.style.backgroundColor = 'white'
                 }
-            
+                selectRow(9);
             }
             arraySelect = ['', '', '', ''];
         }
         if (row === 10) {
-            if (isArrayEqual( row3Color1, row3Color2, row3Color3, row3Color4) === true) {
-                alert("¡Falta un color!");
-            } else if (isArrayEqual(  row3Color1, row3Color2, row3Color3, row3Color4) !== true) 
+            if (randomArray.length !== arraySelect.length) {
+                alert("¡Falta algun color!");
+            } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
                     check101.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
                     check101.style.backgroundColor = 'orange'
-                }else {
-                    check101.style.backgroundColor = 'white'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check102.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check101.style.backgroundColor = 'orange'
-                }else {
-                    check102.style.backgroundColor = 'white'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check103.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check101.style.backgroundColor = 'orange'
-                }else {
-                    check103.style.backgroundColor = 'white'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check104.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
                     check101.style.backgroundColor = 'orange'
-                }else {
-                    check104.style.backgroundColor = 'white'
                 }
-            
+                selectRow(10);
             }
             arraySelect = ['', '', '', ''];
         }
     }  
-           
-   
     if (row === 11) {   
         localStorage.setItem('randomArray', JSON.stringify(randomArray));
         window.location.href = './loser.html';
