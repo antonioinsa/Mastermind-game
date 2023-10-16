@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(/img/brain-explosion.jpeg);
+    background-image: url(../img/brain-explosion.jpeg);
 }
 
 .space {

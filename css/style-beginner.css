@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: start;
     font-family: 'Cinzel', serif;
-    background-image: url(/img/brain-center-wallpaper.jpeg);
+    background-image: url(../img/brain-center-wallpaper.jpeg);
 }
 
 .space-logo {
