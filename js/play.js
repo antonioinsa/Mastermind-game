@@ -86,45 +86,45 @@ row10Color3.addEventListener('click', rowColorClick);
 row10Color4.addEventListener('click', rowColorClick);
 //comprobar array
 const check11 = document.getElementById('check1-1');
-const check12 = document.getElementById('check2-1');
-const check13 = document.getElementById('check3-1');
-const check14 = document.getElementById('check4-1');
-const check21 = document.getElementById('check1-2');
+const check21 = document.getElementById('check2-1');
+const check31 = document.getElementById('check3-1');
+const check41 = document.getElementById('check4-1');
+const check12 = document.getElementById('check1-2');
 const check22 = document.getElementById('check2-2');
-const check23 = document.getElementById('check3-2');
-const check24 = document.getElementById('check4-2');
-const check31 = document.getElementById('check1-3');
-const check32 = document.getElementById('check2-3');
+const check32 = document.getElementById('check3-2');
+const check42 = document.getElementById('check4-2');
+const check13 = document.getElementById('check1-3');
+const check23 = document.getElementById('check2-3');
 const check33 = document.getElementById('check3-3');
-const check34 = document.getElementById('check4-3');
-const check41 = document.getElementById('check1-4');
-const check42 = document.getElementById('check2-4');
-const check43 = document.getElementById('check3-4');
+const check43 = document.getElementById('check4-3');
+const check14 = document.getElementById('check1-4');
+const check24 = document.getElementById('check2-4');
+const check34 = document.getElementById('check3-4');
 const check44 = document.getElementById('check4-4');
-const check51 = document.getElementById('check1-5');
-const check52 = document.getElementById('check2-5');
-const check53 = document.getElementById('check3-5');
-const check54 = document.getElementById('check4-5');
-const check61 = document.getElementById('check1-6');
-const check62 = document.getElementById('check2-6');
-const check63 = document.getElementById('check3-6');
-const check64 = document.getElementById('check4-6');
-const check71 = document.getElementById('check1-7');
-const check72 = document.getElementById('check2-7');
-const check73 = document.getElementById('check3-7');
-const check74 = document.getElementById('check4-7');
-const check81 = document.getElementById('check1-8');
-const check82 = document.getElementById('check2-8');
-const check83 = document.getElementById('check3-8');
-const check84 = document.getElementById('check4-8');
-const check91 = document.getElementById('check1-9');
-const check92 = document.getElementById('check2-9');
-const check93 = document.getElementById('check3-9');
-const check94 = document.getElementById('check4-9');
-const check101 = document.getElementById('check1-10');
-const check102 = document.getElementById('check2-10');
-const check103 = document.getElementById('check3-10');
-const check104 = document.getElementById('check4-10');
+const check15 = document.getElementById('check1-5');
+const check25 = document.getElementById('check2-5');
+const check35 = document.getElementById('check3-5');
+const check45 = document.getElementById('check4-5');
+const check16 = document.getElementById('check1-6');
+const check26 = document.getElementById('check2-6');
+const check36 = document.getElementById('check3-6');
+const check46 = document.getElementById('check4-6');
+const check17 = document.getElementById('check1-7');
+const check27 = document.getElementById('check2-7');
+const check37 = document.getElementById('check3-7');
+const check47 = document.getElementById('check4-7');
+const check18 = document.getElementById('check1-8');
+const check28 = document.getElementById('check2-8');
+const check38 = document.getElementById('check3-8');
+const check48 = document.getElementById('check4-8');
+const check19 = document.getElementById('check1-9');
+const check29 = document.getElementById('check2-9');
+const check39 = document.getElementById('check3-9');
+const check49 = document.getElementById('check4-9');
+const check110 = document.getElementById('check1-10');
+const check210 = document.getElementById('check2-10');
+const check310 = document.getElementById('check3-10');
+const check410 = document.getElementById('check4-10');
 //Obtener colores localStorage
 const savedColor1 = localStorage.getItem('color1');
 const box1 = document.getElementById('box1');
@@ -211,10 +211,8 @@ let arraySelect = ['', '', '', ''];
         const idlength = id[id.length - 1];
         const hexColor = rgbToHex(box.style.backgroundColor);
         arraySelect[idlength] = hexColor
-        console.log(arraySelect);
         })  
     });
-console.log(row);
 const checkButtom = document.getElementById('check');
 checkButtom.addEventListener('click', () => {
     if(JSON.stringify(arraySelect) === JSON.stringify(randomArray)){
@@ -235,17 +233,17 @@ checkButtom.addEventListener('click', () => {
                     check11.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check12.style.backgroundColor = 'green'
+                    check21.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
                     check11.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check13.style.backgroundColor = 'green'
+                    check31.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
                     check11.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check14.style.backgroundColor = 'green'
+                    check41.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])) {
                     check11.style.backgroundColor = 'orange'
                 }
@@ -260,24 +258,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check21.style.backgroundColor = 'green'
+                    check12.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check21.style.backgroundColor = 'orange'
+                    check12.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
                     check22.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check21.style.backgroundColor = 'orange'
+                    check12.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check23.style.backgroundColor = 'green'
+                    check32.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check21.style.backgroundColor = 'orange'
+                    check12.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check24.style.backgroundColor = 'green'
+                    check42.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check21.style.backgroundColor = 'orange'
+                    check12.style.backgroundColor = 'orange'
                 }
                 selectRow(2);
             }
@@ -289,24 +287,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check31.style.backgroundColor = 'green'
+                    check13.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check31.style.backgroundColor = 'orange'
+                    check13.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check32.style.backgroundColor = 'green'
+                    check23.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check31.style.backgroundColor = 'orange'
+                    check13.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
                     check33.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check21.style.backgroundColor = 'orange'
+                    check13.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check34.style.backgroundColor = 'green'
+                    check43.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check31.style.backgroundColor = 'orange'
+                    check13.style.backgroundColor = 'orange'
                 }
                 selectRow(3);
             }
@@ -318,24 +316,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check41.style.backgroundColor = 'green'
+                    check14.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check41.style.backgroundColor = 'orange'
+                    check14.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check42.style.backgroundColor = 'green'
+                    check24.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check41.style.backgroundColor = 'orange'
+                    check14.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check43.style.backgroundColor = 'green'
+                    check34.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check41.style.backgroundColor = 'orange'
+                    check14.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
                     check44.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check41.style.backgroundColor = 'orange'
+                    check14.style.backgroundColor = 'orange'
                 }
                 selectRow(4);
             }
@@ -347,24 +345,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check51.style.backgroundColor = 'green'
+                    check15.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check51.style.backgroundColor = 'orange'
+                    check15.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check52.style.backgroundColor = 'green'
+                    check25.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check51.style.backgroundColor = 'orange'
+                    check15.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check53.style.backgroundColor = 'green'
+                    check35.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check51.style.backgroundColor = 'orange'
+                    check15.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check54.style.backgroundColor = 'green'
+                    check45.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check51.style.backgroundColor = 'orange'
+                    check15.style.backgroundColor = 'orange'
                 }
                 selectRow(5);
             }
@@ -376,24 +374,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check61.style.backgroundColor = 'green'
+                    check16.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check61.style.backgroundColor = 'orange'
+                    check16.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check62.style.backgroundColor = 'green'
+                    check26.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check61.style.backgroundColor = 'orange'
+                    check16.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check63.style.backgroundColor = 'green'
+                    check36.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check61.style.backgroundColor = 'orange'
+                    check16.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check64.style.backgroundColor = 'green'
+                    check46.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check61.style.backgroundColor = 'orange'
+                    check16.style.backgroundColor = 'orange'
                 }
                 selectRow(6);
             }
@@ -405,24 +403,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check71.style.backgroundColor = 'green'
+                    check17.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check71.style.backgroundColor = 'orange'
+                    check17.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check72.style.backgroundColor = 'green'
+                    check27.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check71.style.backgroundColor = 'orange'
+                    check17.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check73.style.backgroundColor = 'green'
+                    check37.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check71.style.backgroundColor = 'orange'
+                    check17.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check74.style.backgroundColor = 'green'
+                    check47.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check71.style.backgroundColor = 'orange'
+                    check17.style.backgroundColor = 'orange'
                 }
                 selectRow(7);
             }
@@ -434,24 +432,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length)  
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check81.style.backgroundColor = 'green'
+                    check18.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check81.style.backgroundColor = 'orange'
+                    check18.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check82.style.backgroundColor = 'green'
+                    check28.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check81.style.backgroundColor = 'orange'
+                    check18.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check83.style.backgroundColor = 'green'
+                    check38.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check81.style.backgroundColor = 'orange'
+                    check18.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check84.style.backgroundColor = 'green'
+                    check48.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check81.style.backgroundColor = 'orange'
+                    check18.style.backgroundColor = 'orange'
                 }
                 selectRow(8);
             }
@@ -463,24 +461,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length)  
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check91.style.backgroundColor = 'green'
+                    check19.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check91.style.backgroundColor = 'orange'
+                    check19.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check92.style.backgroundColor = 'green'
+                    check29.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check91.style.backgroundColor = 'orange'
+                    check19.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check93.style.backgroundColor = 'green'
+                    check39.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check91.style.backgroundColor = 'orange'
+                    check19.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check94.style.backgroundColor = 'green'
+                    check49.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check91.style.backgroundColor = 'orange'
+                    check19.style.backgroundColor = 'orange'
                 }
                 selectRow(9);
             }
@@ -492,24 +490,24 @@ checkButtom.addEventListener('click', () => {
             } else if (randomArray.length === arraySelect.length) 
             { 
                 if (arraySelect[0] === randomArray[0]) {
-                    check101.style.backgroundColor = 'green'
+                    check110.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
-                    check101.style.backgroundColor = 'orange'
+                    check110.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[1] === randomArray[1]) {
-                    check102.style.backgroundColor = 'green'
+                    check210.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[1])) {
-                    check101.style.backgroundColor = 'orange'
+                    check110.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[2] === randomArray[2]) {
-                    check103.style.backgroundColor = 'green'
+                    check310.style.backgroundColor = 'green'
                 }  else if (randomArray.includes(arraySelect[2])) {
-                    check101.style.backgroundColor = 'orange'
+                    check110.style.backgroundColor = 'orange'
                 }
                 if (arraySelect[3] === randomArray[3]) {
-                    check104.style.backgroundColor = 'green'
+                    check410.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[3])){
-                    check101.style.backgroundColor = 'orange'
+                    check110.style.backgroundColor = 'orange'
                 }
                 selectRow(10);
             }
