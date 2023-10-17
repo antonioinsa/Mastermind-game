@@ -7,27 +7,31 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Cinzel', serif;
-    background-image: url(../img/brain-center-wallpaper.jpeg);
+    background-image:  url(../img/brain-center-wallpaper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .space-logo {
     height: 10em;
     width: 100vw;
 }
+.total{
+    display: flex;
+    flex-direction: column;
+}
 
 .logo {
-    align-items: start;
-    height: 1.5em;
+    display: flex;
+    justify-content: center;
     width: 100vw;
+    height: 1.5em;
     font-size: 100px;
     background: #FFC814;
     background: linear-gradient(to left, #FFC814 0%, #FF9A36 32%, #FFC95C 50%, #FFAA00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .space-logo-2 {
@@ -46,7 +50,7 @@ body {
 }
 
 .space-logo-3 {
-    height: 5em;
+    height: 2em;
     width: 100vw;
 }
 

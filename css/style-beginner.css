@@ -8,6 +8,9 @@ body {
     align-items: center;
     font-family: 'Cinzel', serif;
     background-image: url(../img/brain-center-wallpaper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .space-logo {

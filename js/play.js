@@ -200,7 +200,7 @@ const selectRow = (rowNumber) => {
     for (let i = 1; i <= 10; i++) {
         const rowElement = document.querySelector('.row' + i);
         rowElement.style.pointerEvents = "none";
-        rowElement.style.opacity = "0.9";
+        rowElement.style.opacity = "0.8";
     }
     // Habilito row específico
     const selectedRow = document.querySelector('.row' + rowNumber);
