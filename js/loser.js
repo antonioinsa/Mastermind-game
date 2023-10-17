@@ -10,7 +10,16 @@ if (storedColors) {
         }
     });
 }
-playAgain.addEventListener('click', () => {
-    window.location.href = './play.html'
-    localStorage.removeItem('randomArray');
+
+document.getElementById('playAgain').addEventListener('click', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const from = urlParams.get('from');
+
+    if (from === 'beginer') {
+        window.location.href = './beginer.html';
+    } else if (from === 'intermediate') {
+        window.location.href = './intermediate.html';
+    } else if (from === 'advanced') {
+        window.location.href = './advanced.html';
+    }
 });

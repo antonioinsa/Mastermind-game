@@ -19,26 +19,6 @@ const row5Color1 = document.getElementById('color5-0');
 const row5Color2 = document.getElementById('color5-1');
 const row5Color3 = document.getElementById('color5-2');
 const row5Color4 = document.getElementById('color5-3');
-const row6Color1 = document.getElementById('color6-0');
-const row6Color2 = document.getElementById('color6-1');
-const row6Color3 = document.getElementById('color6-2');
-const row6Color4 = document.getElementById('color6-3');
-const row7Color1 = document.getElementById('color7-0');
-const row7Color2 = document.getElementById('color7-1');
-const row7Color3 = document.getElementById('color7-2');
-const row7Color4 = document.getElementById('color7-3');
-const row8Color1 = document.getElementById('color8-0');
-const row8Color2 = document.getElementById('color8-1');
-const row8Color3 = document.getElementById('color8-2');
-const row8Color4 = document.getElementById('color8-3');
-const row9Color1 = document.getElementById('color9-0');
-const row9Color2 = document.getElementById('color9-1');
-const row9Color3 = document.getElementById('color9-2');
-const row9Color4 = document.getElementById('color9-3');
-const row10Color1 = document.getElementById('color10-0');
-const row10Color2 = document.getElementById('color10-1');
-const row10Color3 = document.getElementById('color10-2');
-const row10Color4 = document.getElementById('color10-3');
 
 // Agregar un evento clic a cada uno de los divs
 const rowColorClick = function () {
@@ -65,26 +45,6 @@ row5Color1.addEventListener('click', rowColorClick);
 row5Color2.addEventListener('click', rowColorClick);
 row5Color3.addEventListener('click', rowColorClick);
 row5Color4.addEventListener('click', rowColorClick);
-row6Color1.addEventListener('click', rowColorClick);
-row6Color2.addEventListener('click', rowColorClick);
-row6Color3.addEventListener('click', rowColorClick);
-row6Color4.addEventListener('click', rowColorClick);
-row7Color1.addEventListener('click', rowColorClick);
-row7Color2.addEventListener('click', rowColorClick);
-row7Color3.addEventListener('click', rowColorClick);
-row7Color4.addEventListener('click', rowColorClick);
-row8Color1.addEventListener('click', rowColorClick);
-row8Color2.addEventListener('click', rowColorClick);
-row8Color3.addEventListener('click', rowColorClick);
-row8Color4.addEventListener('click', rowColorClick);
-row9Color1.addEventListener('click', rowColorClick);
-row9Color2.addEventListener('click', rowColorClick);
-row9Color3.addEventListener('click', rowColorClick);
-row9Color4.addEventListener('click', rowColorClick);
-row10Color1.addEventListener('click', rowColorClick);
-row10Color2.addEventListener('click', rowColorClick);
-row10Color3.addEventListener('click', rowColorClick);
-row10Color4.addEventListener('click', rowColorClick);
 
 //comprobar array
 const check11 = document.getElementById('check1-1');
@@ -107,26 +67,6 @@ const check15 = document.getElementById('check1-5');
 const check25 = document.getElementById('check2-5');
 const check35 = document.getElementById('check3-5');
 const check45 = document.getElementById('check4-5');
-const check16 = document.getElementById('check1-6');
-const check26 = document.getElementById('check2-6');
-const check36 = document.getElementById('check3-6');
-const check46 = document.getElementById('check4-6');
-const check17 = document.getElementById('check1-7');
-const check27 = document.getElementById('check2-7');
-const check37 = document.getElementById('check3-7');
-const check47 = document.getElementById('check4-7');
-const check18 = document.getElementById('check1-8');
-const check28 = document.getElementById('check2-8');
-const check38 = document.getElementById('check3-8');
-const check48 = document.getElementById('check4-8');
-const check19 = document.getElementById('check1-9');
-const check29 = document.getElementById('check2-9');
-const check39 = document.getElementById('check3-9');
-const check49 = document.getElementById('check4-9');
-const check110 = document.getElementById('check1-10');
-const check210 = document.getElementById('check2-10');
-const check310 = document.getElementById('check3-10');
-const check410 = document.getElementById('check4-10');
 
 //Obtener colores localStorage
 const savedColor1 = localStorage.getItem('color1');
@@ -197,16 +137,27 @@ let numRow = 1;
 
 //Deshabilito row's
 const selectRow = (rowNumber) => {
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         const rowElement = document.querySelector('.row' + i);
-        rowElement.style.pointerEvents = "none";
-        rowElement.style.opacity = "0.8";
+        rowElement.style.pointerEvents = 'none';
+        rowElement.style.opacity = '0.5';
     }
+
     // Habilito row específico
     const selectedRow = document.querySelector('.row' + rowNumber);
-    selectedRow.style.pointerEvents = "auto";
-    selectedRow.style.opacity = "1";
+    selectedRow.style.pointerEvents = 'auto';
+    selectedRow.style.opacity = '1';
+
+    setTimeout(() => {
+        for (let i = 1; i <= 5; i++) {
+            const rowElement = document.querySelector('.row' + i);
+            if (i !== rowNumber) {
+                rowElement.style.opacity = '0';
+            }
+        }
+    }, 1100);
 }
+
 selectRow(numRow);
 
 //Array de selccion
@@ -226,7 +177,7 @@ checkButtom.addEventListener('click', () => {
 
     if (JSON.stringify(arraySelect) === JSON.stringify(randomArray)) {
         row = 0;
-        window.location.href = './winner.html';
+        window.location.href = './winner.html?from=advanced';
     } else {
         row++;
         numRow = 'row' + row;
@@ -273,7 +224,7 @@ checkButtom.addEventListener('click', () => {
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
+
                 if (arraySelect[0] === randomArray[0]) {
                     check12.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
@@ -309,7 +260,7 @@ checkButtom.addEventListener('click', () => {
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
+
                 if (arraySelect[0] === randomArray[0]) {
                     check13.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
@@ -379,7 +330,7 @@ checkButtom.addEventListener('click', () => {
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
+
                 if (arraySelect[0] === randomArray[0]) {
                     check15.style.backgroundColor = 'green'
                 } else if (randomArray.includes(arraySelect[0])) {
@@ -403,188 +354,14 @@ checkButtom.addEventListener('click', () => {
                 } else if (randomArray.includes(arraySelect[3])) {
                     check45.style.backgroundColor = 'orange'
                 }
-                selectRow(6);
             }
             arraySelect = ['', '', '', ''];
         }
-        if (row === 6) {
-            if (arraySelect.some(elemento => elemento.trim() === "")) {
-                row--;
-                alert("¡Falta algun color!");
-                return;
 
-            } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
-                if (arraySelect[0] === randomArray[0]) {
-                    check16.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[0])) {
-                    check16.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[1] === randomArray[1]) {
-                    check26.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[1])) {
-                    check26.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[2] === randomArray[2]) {
-                    check36.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[2])) {
-                    check36.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[3] === randomArray[3]) {
-                    check46.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[3])) {
-                    check46.style.backgroundColor = 'orange'
-                }
-                selectRow(7);
-            }
-            arraySelect = ['', '', '', ''];
-        }
-        if (row === 7) {
-            if (arraySelect.some(elemento => elemento.trim() === "")) {
-                row--;
-                alert("¡Falta algun color!");
-                return;
-
-            } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
-                if (arraySelect[0] === randomArray[0]) {
-                    check17.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[0])) {
-                    check17.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[1] === randomArray[1]) {
-                    check27.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[1])) {
-                    check27.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[2] === randomArray[2]) {
-                    check37.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[2])) {
-                    check37.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[3] === randomArray[3]) {
-                    check47.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[3])) {
-                    check47.style.backgroundColor = 'orange'
-                }
-                selectRow(8);
-            }
-            arraySelect = ['', '', '', ''];
-        }
-        if (row === 8) {
-            if (arraySelect.some(elemento => elemento.trim() === "")) {
-                row--;
-                alert("¡Falta algun color!");
-                return;
-
-            } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
-                if (arraySelect[0] === randomArray[0]) {
-                    check18.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[0])) {
-                    check18.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[1] === randomArray[1]) {
-                    check28.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[1])) {
-                    check28.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[2] === randomArray[2]) {
-                    check38.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[2])) {
-                    check38.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[3] === randomArray[3]) {
-                    check48.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[3])) {
-                    check48.style.backgroundColor = 'orange'
-                }
-                selectRow(9);
-            }
-            arraySelect = ['', '', '', ''];
-        }
-        if (row === 9) {
-            if (arraySelect.some(elemento => elemento.trim() === "")) {
-                row--;
-                alert("¡Falta algun color!");
-                return;
-
-            } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
-                if (arraySelect[0] === randomArray[0]) {
-                    check19.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[0])) {
-                    check19.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[1] === randomArray[1]) {
-                    check29.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[1])) {
-                    check29.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[2] === randomArray[2]) {
-                    check39.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[2])) {
-                    check39.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[3] === randomArray[3]) {
-                    check49.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[3])) {
-                    check49.style.backgroundColor = 'orange'
-                }
-                selectRow(10);
-            }
-            arraySelect = ['', '', '', ''];
-        }
-        if (row === 10) {
-            if (arraySelect.some(elemento => elemento.trim() === "")) {
-                row--;
-                alert("¡Falta algun color!");
-                return;
-                
-            } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
-                
-                if (arraySelect[0] === randomArray[0]) {
-                    check110.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[0])) {
-                    check110.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[1] === randomArray[1]) {
-                    check210.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[1])) {
-                    check210.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[2] === randomArray[2]) {
-                    check310.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[2])) {
-                    check310.style.backgroundColor = 'orange'
-                }
-
-                if (arraySelect[3] === randomArray[3]) {
-                    check410.style.backgroundColor = 'green'
-                } else if (randomArray.includes(arraySelect[3])) {
-                    check410.style.backgroundColor = 'orange'
-                }
-            }
-            arraySelect = ['', '', '', ''];
-        }
     }
-    if (row === 10) {
+    if (row === 5) {
         localStorage.setItem('randomArray', JSON.stringify(randomArray));
-        window.location.href = './loser.html';
+        window.location.href = './loser.html?from=advanced';
         return;
     }
 });

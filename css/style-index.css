@@ -7,17 +7,18 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Cinzel', serif;
-    background-image:  url(../img/brain-center-wallpaper.jpeg);
+    background-image: url(../img/brain-center-wallpaper.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
 .space-logo {
-    height: 10em;
+    height: 5em;
     width: 100vw;
 }
-.total{
+
+.total {
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +36,7 @@ body {
 }
 
 .space-logo-2 {
-    height: 26.8em;
+    height: 30em;
     width: 100vw;
 }
 
