@@ -155,7 +155,7 @@ const selectRow = (rowNumber) => {
                 rowElement.style.opacity = '0';
             }
         }
-    }, 1100);
+    }, 1000);
 }
 
 selectRow(numRow);
@@ -184,7 +184,7 @@ checkButtom.addEventListener('click', () => {
         if (row === 1) {
             if (arraySelect.some(elemento => elemento.trim() === "")) {
                 row--;
-                alert("¡Falta algun color!");
+                alert("Some color is missing!");
                 return;
 
             } else if (arraySelect.every(elemento => elemento.trim() !== "")) {
@@ -220,7 +220,7 @@ checkButtom.addEventListener('click', () => {
         if (row === 2) {
             if (arraySelect.some(elemento => elemento.trim() === "")) {
                 row--;
-                alert("¡Falta algun color!");
+                alert("Some color is missing!");
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
@@ -256,7 +256,7 @@ checkButtom.addEventListener('click', () => {
         if (row === 3) {
             if (arraySelect.some(elemento => elemento.trim() === "")) {
                 row--;
-                alert("¡Falta algun color!");
+                alert("Some color is missing!");
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
@@ -291,7 +291,7 @@ checkButtom.addEventListener('click', () => {
         if (row === 4) {
             if (arraySelect.some(elemento => elemento.trim() === "")) {
                 row--;
-                alert("¡Falta algun color!");
+                alert("Some color is missing!");
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {
@@ -326,7 +326,7 @@ checkButtom.addEventListener('click', () => {
         if (row === 5) {
             if (arraySelect.some(elemento => elemento.trim() === "")) {
                 row--;
-                alert("¡Falta algun color!");
+                alert("Some color is missing!");
                 return;
 
             } else if (arraySelect.some(elemento => elemento.trim() !== "")) {

@@ -46,12 +46,12 @@ startButton.addEventListener('click', () => {
                 localStorage.getItem('color4')) ||
             (localStorage.getItem('color3') ===
                 localStorage.getItem('color4'))) {
-            alert('Seleccione diferentes colores')
+            alert("Select different colors")
         } else {
             window.location.href = './levels.html';
         }
     } else {
-        alert('Debe rellena el nombre de jugador y seleccionar diferentes colores para poder empezar la partida');
+        alert("You must fill in the player's name and select different colors to start the game");
     }
 
 });
